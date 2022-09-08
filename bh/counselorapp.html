@@ -1,0 +1,1254 @@
+
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+        <!-- CookiePro Cookies Consent Notice start for betterhelp.com -->
+    <!-- <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="8ff2fc2b-5cf9-4bf1-90c0-66800fed2350" ></script> -->
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+
+        const id = setInterval(function () {
+            const policy_text = document.getElementById('onetrust-policy-text');
+
+            if (policy_text) {
+                policy_text.querySelector('a').addEventListener('click', function (event) {
+                    if (event.target.textContent.toLowerCase() === 'read more') {
+                        event.preventDefault();
+                        Optanon.ToggleInfoDisplay();
+                    }
+                })
+
+                clearInterval(id)
+            }
+        }, 250);
+    </script>
+    <style>
+    #onetrust-consent-sdk {
+        font-family: 'Lato', Arial, sans-serif;
+    }
+
+    @media screen and (max-width: 550px) {
+        #onetrust-button-group {
+            display: flex !important;
+            gap: 4px;
+        }
+
+        #onetrust-button-group > button:first-of-type {
+            margin-left: auto !important;
+        }
+        
+        #onetrust-button-group > button:last-of-type {
+            margin-right: auto !important;
+        }
+    }
+    </style>
+    <!-- CookiePro Cookies Consent Notice end for betterhelp.com -->
+            <script>
+    const new_cookie_names = {
+        ms_click_tracker: 'bh_mc_id',
+    };
+
+    function get_cookie(cookie_name) {
+        let name = cookie_name + "=";
+        let cookie_array = document.cookie.split(';');
+        for (let i = 0; i < cookie_array.length; i++) {
+            let c = cookie_array[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (new_cookie_names[cookie_name] && c.indexOf(new_cookie_names[cookie_name] + '=') === 0) {
+                return c.substring(new_cookie_names[cookie_name].length + 1, c.length);
+            } else if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return null;
+    }
+
+    function set_cookie(cookie_name, cookie_value, expire_seconds, additional_param_info='') {
+        let d = new Date();
+        d.setTime(d.getTime() + (expire_seconds * 1000));
+        let expires = "";
+        if (expire_seconds != false) {
+            expires = "expires=" + d.toUTCString();
+        }
+        if (new_cookie_names[cookie_name]) {
+            cookie_name = new_cookie_names[cookie_name];
+        }
+        if (additional_param_info.length && additional_param_info.charAt(0) !== ';') {
+            additional_param_info = ';' + additional_param_info;
+        }
+        document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/" + additional_param_info;
+    }
+</script>
+        <script>
+            var page_info = {"sites_fqdn":["www.pridecounseling.com","www.faithfulcounseling.com","www.mytherapist.com","www.terappeuta.com","www.icounseling.com","www.teencounseling.com","www.betterhelp.com","www.betterhelporg.com","www.regain.us"],"redirect_sites_fqdn":["www.betterhelp.com","www.regain.us","www.faithfulcounseling.com","www.pridecounseling.com","www.teencounseling.com"],"use_cookiepro_production":true,"UK_quiz":true,"counselor_earnings":{"5":7800,"6":9620,"7":11440,"8":13260,"9":15080,"10":16900,"11":18980,"12":21060,"13":23140,"14":25220,"15":27300,"16":29640,"17":31980,"18":34320,"19":36660,"20":39000,"21":41600,"22":44200,"23":46800,"24":49400,"25":52000,"26":54860,"27":57720,"28":60580,"29":63440,"30":66300,"31":69420,"32":72540,"33":75660,"34":78780,"35":81900,"36":85540,"37":89180,"38":92820,"39":96460,"40":100100,"41":103740,"42":107380,"43":111020,"44":114660,"45":118300,"46":121940,"47":125580,"48":129220,"49":132860,"50":136500},"RECAPTCHA_V3_SITE_KEY":"6LetGMcUAAAAANFcpJR1wJz3D5h_aNFFiQou4cMm","trigger_recaptcha_v3":true,"use_sweeps":true,"total_sessions":232208632,"total_therapists":27512,"total_members":3213169,"app_version":"3f822e55d841","user_type":"logged_out_user","user_id":"8cfee1002a56689c7b332ed29c6b42f4bc011b112ab61b136b030818bcf34d977b265b248794ba3d0f522a9b0c417475fb4c4c249a6c1e6ac6462c30f474c691","template":"counselor_application_redesign_v2","is_mobile":false,"is_app":false,"is_ios_app":false,"is_android_app":false,"user_app_version":null,"is_local":false,"is_qa_server":false,"features":{"specify_podcast":true,"sunsetting":false,"urgent_messages":true,"couples":false,"phone_calls":true,"secret_assign_straights":true,"livechat":true,"about":true,"counselor_application":true,"counselor_application_lean":false,"worksheets":true,"smart_match_with_categories":true,"groupinars":true,"login_quotes":true,"videosessions":true,"app_supports_videosessions":true,"cloud_chat":true,"phq_followup":true,"consent_agreement":true,"gmail_quick_action":true,"scheduling":true,"support_link":true,"has_paypal_always":false,"no_trial":true,"strike_through_cake":true,"dollar_test_charge":true,"groupon":true,"mobgo":true,"mental":true,"funnel_smart_match":true,"funnel_overview":true,"offer_promo_codes":true,"email_verification_always":true,"reviews_page":true,"jobs_page":true,"security_logos_display":true,"social_links_display":true,"counselor-directory":true,"social_signup":false,"language_is_matching_hard_filter":false,"advice":true,"presskit":true,"press_page":true,"text_notifications":true,"goals":true,"goals_mobile_main_menu":false,"batch_creation":true,"ask_language":true,"parent_child_account":false,"hardcoded_testimonials":false,"friendly_funnel":true,"referral_program":true,"vouchers":true,"betterhelp_branded":true,"signup_captcha":true,"cookie_consent_required":true,"journal":true,"maintenance_plan":true,"show_business_link":true,"counselors_page":true},"date_time_formats":{"full":"F j, Y g:ia T","full_short_mo_no_tz":"M j, Y g:ia","date":"F j, Y","date_short_mo":"M j, Y","time":"g:ia","time_with_tz":"g:ia T"},"subdomain":"www","cdn_host_assets":"dy7glz37jgl0b.cloudfront.net","cdn_host":"static.betterhelp.com","assets_app_version":"?v=966d54b722cb","product_code_name":"betterhelp","product_name":"HappyMind","unix_timestamp":1662648744,"use_trackjs":true,"trackjs_api_key":"8e343f2dd24f4a45bf5e416e9c3b37e4","trackjs_user":"","default_language_id":1,"csrf_token":"69e83dfac941d41d0071dfd6b7d2d869e71ebcb4251ff1be48c88db8ace247a6793bc1ade0c606ed52e6846613aa5709cb096a1d8bdac42854e8120fb8d6317d","presignup_experiments":{"HELP_ME_NO_POPUP":"CONTROL","CHANGE_QUIZ_HEADER":"CONTROL","BENEFIT_CODE":"TEST"},"counselor_presignup_experiments":{"THERAPIST_SOCIAL_PROOF_COUNTERS":"Test"}}
+        </script>
+                                    
+    <!-- META TAGS -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Find Online Therapy Jobs With The Leader In Online Therapy | HappyMind</title>
+        <meta name="description" content="HappyMind is looking to fill open online therapy jobs with licensed therapists. Fill out an application with the world's largest online therapy platform today.">
+    <meta name="keywords" content="online counseling jobs, online therapy jobs, online mental health counseling jobs" >
+    <meta name="title" content="Find Online Therapy Jobs With The Leader In Online Therapy | HappyMind">
+                    <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="Find Online Therapy Jobs With The Leader In Online Therapy | HappyMind" />
+                    <meta property="og:url"                content="http://www.betterhelp.com" />
+            <meta property="og:description"        content="HappyMind offers private, affordable online counseling when you need it from licensed, board-accredited therapists. Get help, you deserve to be happy!" />
+            <meta property="og:image"              content="https://dy7glz37jgl0b.cloudfront.net/brand/betterhelp/betterhelp-fb-small.jpg" />
+            <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@betterhelp">
+    <meta name="twitter:title" content="Find Online Therapy Jobs With The Leader In Online Therapy | HappyMind">
+                    <meta name="twitter:description" content="HappyMind offers private, affordable online counseling when you need it from licensed, board-accredited therapists. Get help, you deserve to be happy!">
+            <meta name="twitter:image" content="https://dy7glz37jgl0b.cloudfront.net/brand/betterhelp/betterhelp-fb-small.jpg">
+                <link rel="shortcut icon" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/favicon.ico" type="image/x-icon">
+    <!-- Apple Touch Icons for mobile safari -->
+    <link rel="apple-touch-icon" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/apple-touch-icon-120x120.png">
+    <!-- End Apple Touch Icons for mobile safari -->
+
+            
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preload"
+        href="//static.betterhelp.com/css/contrib/jquerymobile/1.4.5/jquery.mobile.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    >
+            <link
+            rel="preload"
+            href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic&display=swap'
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        >
+        <link
+        rel="preload"
+        href="//static.betterhelp.com/css/contrib/font-awesome/4.7.0/css/font-awesome.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    >
+        <link rel="stylesheet" href="//static.betterhelp.com/css/contrib/font-awesome-animation/0.0.7/css/font-awesome-animation.min.css">
+                
+            
+                
+    
+    <link rel="stylesheet" href="//static.betterhelp.com/css/betterhelp/bh_style.min.3f822e55d841.css">
+
+                        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap' rel='stylesheet' type='text/css'>
+            
+    
+    <link rel="stylesheet" href="//static.betterhelp.com/css/slider/slick_new.css" >
+    <link rel="stylesheet" href="//static.betterhelp.com/css/slider/slick-theme.css" >
+
+            <link rel="stylesheet" href="//static.betterhelp.com/css/contrib/odometer-theme-train-station.min.css">
+    
+                <!-- Sweeps Tracking -->
+    <script> zarazData = {"dataLayerIgnore":["gtm.dom","gtm.load","gtm.js","gtm.triggerGroup","OptanonLoaded","OneTrustLoaded"],"z_product_code_name":"betterhelp","z_loadExtraScripts":"GTM-KP7H4QL","z_cookieConsent":0} ; </script>
+    <script src="https://z.betterhelp.com/cdn-cgi/zaraz/i.js"></script>
+    <!-- End Sweeps Tracking -->
+
+<script type="text/javascript" async>
+    try {
+        ;(function (p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i);
+                p[i] = function () {
+                    (p[i].q = p[i].q || []).push(arguments)
+                };
+                p[i].q = p[i].q || [];
+                n = l.createElement(o);
+                g = l.getElementsByTagName(o)[0];
+                n.async = 1;
+                n.src = w;
+                g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "//static.betterhelp.com/js/contrib/sp/H9R1GshL.js?v=18", "snowplow"));
+
+        snowplow('newTracker', 'multisite', 'https://events.betterhelp.com', {
+            appId: '2',
+            discoverRootDomain: true,
+            cookieSameSite: 'Lax', // Recommended
+            contexts: {
+                webPage: true // default, can be omitted
+            }
+        });
+        snowplow('enableActivityTracking', {
+            minimumVisitLength: 30,
+            heartbeatDelay: 10
+        });
+        snowplow('trackPageView');
+        var snowplow_global = null;
+        snowplow(function () {
+            snowplow_global = this.multisite;
+        });
+    }
+    catch (e) {
+        console.log(e);
+    }
+</script>
+    
+        
+    
+            <script src="https://www.recaptcha.net/recaptcha/api.js?render=6LetGMcUAAAAANFcpJR1wJz3D5h_aNFFiQou4cMm"></script>
+        
+</head>
+
+<body id="counselor_application_redesign_v2" class="" cdn="static.betterhelp.com">
+            <script>
+            function remove_url_parameter(url, parameter) {
+                //prefer to use l.search if you have a location/link object
+                var url_parts= url.split('?');
+                if (url_parts.length>=2) {
+                    var prefix= encodeURIComponent(parameter)+'=';
+                    var pars= url_parts[1].split(/[&;]/g);
+
+                    //reverse iteration as may be destructive
+                    for (var i= pars.length; i-- > 0;) {
+                        //idiom for string.startsWith
+                        if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                            pars.splice(i, 1);
+                        }
+                    }
+
+                    url= url_parts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
+                    return url;
+                } else {
+                    return url;
+                }
+            }
+            try {
+                var clean_url = remove_url_parameter(window.location.href, 'email');
+                clean_url = remove_url_parameter(clean_url, 'e');
+                clean_url = remove_url_parameter(clean_url, 'pe');
+                clean_url = remove_url_parameter(clean_url, 'pn');
+                clean_url = remove_url_parameter(clean_url, 'organization_name');
+                window.history.replaceState('', '', clean_url);
+            }
+            catch (e) {}
+        </script>
+     <!-- end not automation and not amp -->
+            <div class="overlay-loading-layer hidden" id="loading_overlay">
+            <div class="loading-wrap">
+                <div class="loading-circle">
+                    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                </div>
+            </div>
+        </div>
+     <!-- end not amp -->
+    <div id="body-container">
+        
+            <header class="  is-logged-out">
+    
+    <!-- Branding -->
+            <a class="hidden-sm brand-logo"   href="/" >
+            <span aria-describedby="Please visit www.betterhelp.com/accessible to view the accessible version of our site."></span>
+        </a>
+                    <a class="hidden-xs  hidden-md hidden-lg brand-icon" href="/" ><div class="brand"><img src="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/icon-color-md.png?v=966d54b722cb" alt="HappyMind home"></div></a>
+            <span aria-describedby="Please visit www.betterhelp.com/accessible to view the accessible version of our site."></span>
+                            
+        <!-- Mobile menu button -->
+                                <div class="mobilemenu-toggle"><i class="fa fa-bars"></i></div>
+                                <!-- Menu -->
+        <div class="menu " aria-label="Main Menu" role="navigation">
+
+            <!-- Left side menu - logged in users only -->
+                            <ul class="main">
+                                    </ul>
+                        <!-- Right side menu -->
+                            <ul class="right">
+                                <a href= "./index.html" id="about-nav" ><li>Home</li></a>
+
+                                                                                    <a href= "./about.html" id="about-nav" ><li>About</li></a>
+                                                                                    <a href="./faq.html" id="faq-nav" ><li>FAQ</li></a>
+                                                                                    <a href="./reviews.html" id="reviews-nav" ><li>Reviews</li></a>
+                                                                                    <a href="./counselorapp.html" id="counselor-nav" ><li>Therapist Jobs</li></a>
+                                                                                    <a href= "./contact.html" id="support-nav" ><li>Contact</li></a>
+                                                                                    <a href="./login.html" class="btn btn-info" id="login-nav">Login</a>
+                                                                                    <a href="./get-started.html" class="btn btn-primary" id="get-started-nav">Get Started</a>
+                                                                </ul>
+                    </div>
+        
+                                </header>
+<div id="notification"></div>
+
+        
+                    <div id="content-container" class="">
+                    <div class="hero-banner" id="counselor-funnel-container" role="region" aria-labelledby="application-carousel-region" tabindex="0">
+        <span id="application-carousel-region" class="sr-only">therapist application carousel</span>
+        <span id="application-funnel-instructions" class="sr-only" tabindex="0">
+Therapist Application carousel: Use the tab key to navigate this questionnaire and use enter key to confirm selection. Use Shift + Escape keys to exit the questionnaire
+</span>
+
+        <div class="banner-intro-title" id="counselor-banner-intro-title">
+                        <h1 class="page-title">Join 27,000+ therapists who are earning more with HappyMind!</h1>
+                        <h2 class="page-subtitle" id="select-license-header" role="group" tabindex="0">Select your license type to get started</h2>
+        </div>
+        <form id="counselor-funnel" class="first-slide" method="post" action="/counselor_application/">
+            <div id="form_errors" class="alert alert-danger hidden" role="alert">
+                                Please correct the following
+                            </div>
+            <div class="slider questionnaire" id="counselor-question-slider" rel="0" role="tablist">
+                                    <div class="counselor_question hidden">
+            <div class="questionnaire-content">
+                <div class="form-group mb-0">
+                                                                    <fieldset>
+                                        <legend class="questionnaire-content-label" tabindex="0">Select your license type to get started</legend>
+
+                    <div>
+                                                    
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3363"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3363][]" value="12949"
+                                           data-question-id="3363"
+                                           tabindex="-1">
+                                    <p>BACP Counsellor <span>(MBACP Registered, Accredited, or Snr Accredited)</span></p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3363"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3363][]" value="12950"
+                                           data-question-id="3363"
+                                           tabindex="-1">
+                                    <p>Chartered Psychologist <span>(HCPC)</span></p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3363"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3363][]" value="12951"
+                                           data-question-id="3363"
+                                           tabindex="-1">
+                                    <p>NCS Counsellor <span>(MNCS, FNCS)</span></p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3363"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3363][]" value="12952"
+                                           data-question-id="3363"
+                                           tabindex="-1">
+                                    <p>Other</p>
+                                </label>
+                                                                        </div>
+
+                                                                </fieldset>
+                                    </div>
+            </div>
+        </div>
+                    <div class="counselor_question hidden">
+            <div class="questionnaire-content">
+                <div class="form-group mb-0">
+                                                                    <fieldset>
+                                        <legend class="questionnaire-content-label" tabindex="0">Where do you currently spend most of your time?</legend>
+
+                    <div>
+                                                    
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12953"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Other online platforms like HappyMind</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12954"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Clinic or hospital</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12955"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Private practice</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12956"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Community mental health agency</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12957"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Teaching or counseling in an academic setting</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12958"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Other clinical setting</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3364"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3364][]" value="12959"
+                                           data-question-id="3364"
+                                           tabindex="-1">
+                                    <p>Not currently practicing</p>
+                                </label>
+                                                                        </div>
+
+                                                                </fieldset>
+                                    </div>
+            </div>
+        </div>
+                    <div class="counselor_question hidden">
+            <div class="questionnaire-content">
+                <div class="form-group mb-0">
+                                                                    <fieldset>
+                                        <legend class="questionnaire-content-label" tabindex="0">How much of your time is currently spent on administrative and/or billing related tasks?</legend>
+
+                    <div>
+                                                    
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3365"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3365][]" value="12960"
+                                           data-question-id="3365"
+                                           tabindex="-1">
+                                    <p>Up to 10% of my time</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3365"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3365][]" value="12961"
+                                           data-question-id="3365"
+                                           tabindex="-1">
+                                    <p>10 to 30% of my time</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3365"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3365][]" value="12962"
+                                           data-question-id="3365"
+                                           tabindex="-1">
+                                    <p>More than 30% of my time</p>
+                                </label>
+                                                                        </div>
+
+                                                                </fieldset>
+                                    </div>
+            </div>
+        </div>
+                    <div class="counselor_question hidden">
+            <div class="questionnaire-content">
+                <div class="form-group mb-0">
+                                                                    <fieldset>
+                                        <legend class="questionnaire-content-label" tabindex="0">What makes you most interested in HappyMind?/legend>
+
+                    <div>
+                                                    
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3366"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3366][]" value="12963"
+                                           data-question-id="3366"
+                                           tabindex="-1">
+                                    <p>To build my own private practice</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3366"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3366][]" value="12964"
+                                           data-question-id="3366"
+                                           tabindex="-1">
+                                    <p>To supplement my private practice</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3366"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3366][]" value="12965"
+                                           data-question-id="3366"
+                                           tabindex="-1">
+                                    <p>To supplement my full-time job</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3366"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3366][]" value="12966"
+                                           data-question-id="3366"
+                                           tabindex="-1">
+                                    <p>To supplement my part-time job</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3366"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3366][]" value="12967"
+                                           data-question-id="3366"
+                                           tabindex="-1">
+                                    <p>Other</p>
+                                </label>
+                                                                        </div>
+
+                                                                </fieldset>
+                                    </div>
+            </div>
+        </div>
+                    <div class="counselor_question hidden">
+            <div class="questionnaire-content">
+                <div class="form-group mb-0">
+                                                                    <fieldset>
+                                        <legend class="questionnaire-content-label" tabindex="0">How much time do you intend to spend with HappyMind clients?</legend>
+
+                    <div>
+                                                    
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3367"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3367][]" value="12968"
+                                           data-question-id="3367"
+                                           tabindex="-1">
+                                    <p>Up to 5 hours a week</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3367"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3367][]" value="12969"
+                                           data-question-id="3367"
+                                           tabindex="-1">
+                                    <p>5 to 10 hours a week</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3367"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3367][]" value="12970"
+                                           data-question-id="3367"
+                                           tabindex="-1">
+                                    <p>10 to 20 hours a week</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3367"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3367][]" value="12971"
+                                           data-question-id="3367"
+                                           tabindex="-1">
+                                    <p>20 to 30 hours a week</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3367"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3367][]" value="12972"
+                                           data-question-id="3367"
+                                           tabindex="-1">
+                                    <p>More than 30 hours a week</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3367"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3367][]" value="12973"
+                                           data-question-id="3367"
+                                           tabindex="-1">
+                                    <p>Not sure</p>
+                                </label>
+                                                                        </div>
+
+                                                                </fieldset>
+                                    </div>
+            </div>
+        </div>
+                    <div class="counselor_question hidden">
+            <div class="questionnaire-content">
+                <div class="form-group mb-0">
+                                                                    <fieldset>
+                                        <legend class="questionnaire-content-label" tabindex="0">How did you first hear about HappyMind?</legend>
+
+                    <div>
+                                                    
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3368"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3368][]" value="12974"
+                                           data-question-id="3368"
+                                           tabindex="-1">
+                                    <p>Internet Research</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3368"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3368][]" value="12976"
+                                           data-question-id="3368"
+                                           tabindex="-1">
+                                    <p>Other</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3368"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3368][]" value="12978"
+                                           data-question-id="3368"
+                                           tabindex="-1">
+                                    <p>Mail</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3368"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3368][]" value="12979"
+                                           data-question-id="3368"
+                                           tabindex="-1">
+                                    <p>Email Outreach</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3368"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3368][]" value="12977"
+                                           data-question-id="3368"
+                                           tabindex="-1">
+                                    <p>Podcast</p>
+                                </label>
+                                                                                
+                                <label class="radio slider-next-select" role="tab" tabindex="0">
+                                    <input required type="radio"
+                                           class="answer slider-next-button radio_3368"
+                                           name="quiz_answers[BH_COUNSELOR_QUIZ_UK_2][3368][]" value="12975"
+                                           data-question-id="3368"
+                                           tabindex="-1">
+                                    <p>Friend or colleague</p>
+                                </label>
+                                                                        </div>
+
+                                                                </fieldset>
+                                    </div>
+            </div>
+        </div>
+        <div class="counselor_question" role="group" aria-label="slide 7 of 7">
+    <div class="questionnaire-content">
+        <div class="form-group" id="counselor_questionnaire_info">
+            <h2 tabindex="0">Finally, please provide your contact information.</h2>
+            <div>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" class="form-control" name="first_name" value="" autocomplete="given-name" required><br/>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" class="form-control" name="last_name" value="" autocomplete="family-name" required><br/>
+                <label for="applicant_email">Email address:</label>
+                <input type="text" id="applicant_email" class="form-control" type="email" name="email" value="" autocomplete="email" required><br />
+                <input type="hidden" name="g-recaptcha-token" id="g-recaptcha-token" value="">
+                <input type="hidden" name="csrf_token" value="69e83dfac941d41d0071dfd6b7d2d869e71ebcb4251ff1be48c88db8ace247a6793bc1ade0c606ed52e6846613aa5709cb096a1d8bdac42854e8120fb8d6317d">
+                <button id="counselor-info" type="button" class="btn btn-primary slider-next-button">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" name="country_id" value="232">
+            </div>
+        </form>
+    </div>
+    <section class="counselor-earnings">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Private practice with no doors & no overhead.</h2>
+            <div class="col-sm-6 col-xs-12">
+    <p>You decide how much you want to work & when you’re available. We’ll take care of the client referrals & billing details.</p>
+
+    <div class="benefits-container">
+        <img src="//dy7glz37jgl0b.cloudfront.net/icons/health-benefits.png?v=966d54b722cb" aria-hidden="true">
+                <p>$650 Health Insurance Stipend*<sup>1</sup></p>
+                <img src="//dy7glz37jgl0b.cloudfront.net/icons/counselor-phone.png?v=966d54b722cb" aria-hidden="true">
+        <p>Free HappyMind Membership</p>
+
+        <img src="//dy7glz37jgl0b.cloudfront.net/icons/piggy-bank-lines.png?v=966d54b722cb" aria-hidden="true">
+        <p>Bonuses & Incentives for High Performers</p>
+    </div>
+
+    <div class="calculator-notes hidden-xs">
+        <p>*1 Eligibility for $650 Health Benefit Stipend requires a min. continuous commitment of 30 hours a week.</p>
+                <p>*2 HappyMind does not guarantee a min. amount of earnings, the above calculator is an estimate based on prevailing factors & incentives on the platform.</p>
+                    </div>
+</div>
+            <div class="col-sm-6 col-xs-12">
+                <div id="counselor-earnings-calculator">
+                                        <div class="row">
+                        <div class="col-sm-12 center margin-bottom">
+                            <h3>Estimated Earnings with HappyMind</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 employment-type">
+                            <fieldset>
+                                <legend><strong class="padding-right type-title">I want to work:</strong></legend>
+                                <input type="radio" id="full-time-radio" name="employment-type" value="full-time"
+                                       checked>
+                                <label class="padding-right" for="full-time-radio">Full-time</label>
+                                <input type="radio" id="part-time-radio" name="employment-type" value="part-time">
+                                <label for="part-time-radio">Part-time</label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="full-time-range-container">
+                        <div class="range-wrap">
+                            <output class="bubble"></output>
+                            <input class="range range-slider range-slider-range" type="range" id="full-time-range" name="ft-range" min="30" max="50" value="40">
+                            <div class="row margin-top">
+                                <div class="col-sm-3 col-xs-3 text-left">30</div>
+                                <div class="col-sm-6 col-xs-6 center">HOURS PER WEEK</div>
+                                <div class="col-sm-3 col-xs-3 text-right">50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-time-range-container hidden">
+                        <div class="range-wrap">
+                            <output class="bubble"></output>
+                            <input class="range range-slider range-slider-range" type="range" id="part-time-range" name="pt-range" min="5" max="30" value="20">
+                            <div class="row margin-top">
+                                <div class="col-sm-3 col-xs-3 text-left">5</div>
+                                <div class="col-sm-6 col-xs-6 center">HOURS PER WEEK</div>
+                                <div class="col-sm-3 col-xs-3 text-right">30</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 center surge-calculation-content margin-bottom">
+                            <h3>*<sup>2</sup>Estimated Annual Earnings:</h3>
+                            <div class="earnings-amount-container">
+                                <h3 id="earnings-amount">$</h3>
+                            </div>
+                                                        <a href="javascript:void(0)" class="counselor-earnings-tooltip" data-which-tip="counselor earnings" aria-label="Estimated Annual Earnings tooltip" data-text="Estimated earnings assume 52 working weeks in a year, and are based on average working conditions on the platform. Actual earnings may vary due to factors such as caseload, client engagement, and tenure on the platform." data-original-title="" title=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                    </div>
+                    </div>
+                                        <div class="row">
+                        <div class="col-lg-12 center">
+                            <button id="counselor-earnings-btn" class="btn btn-success">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-notes hidden-xl hidden-lg hidden-md hidden-sm">
+                    <p>*1 Eligibility for $650 Health Benefit Stipend requires a min. continuous commitment of 30 hours a week.</p>
+                                        <p>*2 HappyMind does not guarantee a min. amount of earnings, the above calculator is an estimate based on prevailing factors & incentives on the platform.</p>
+                                                        </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    
+    <section class="why-and-apply">
+        <div class="container">
+            <div class="why-work-with">
+    <h2>Why work with HappyMind?</h2>
+    <div class="why-work-with-container">
+        <img src="//dy7glz37jgl0b.cloudfront.net/icons/holding-coin.png?v=966d54b722cb" aria-hidden="true">
+        <h3>Reliable Income</h3>
+        <p>Over 10,000 people sign up on HappyMind every day looking for a therapist to help with life’s challenges. HappyMind can be your main source of income ("full time") or a supplement to your current work.</p>
+    </div>
+    <div class="why-work-with-container">
+        <img src="//dy7glz37jgl0b.cloudfront.net/icons/home-2.png?v=966d54b722cb" aria-hidden="true">
+        <h3>Work Flexibility</h3>
+        <p>Work from the comfort of your home, on your own schedule.</p>
+    </div>
+    <div class="why-work-with-container focus-on-therapy">
+        <img src="//dy7glz37jgl0b.cloudfront.net/icons/video-chat-icon.png?v=966d54b722cb" aria-hidden="true">
+        <h3>Focus on Therapy</h3>
+        <p>No need to worry about costs from acquiring clients, billing, support, or operations. Let us handle the fees and paperwork so you can focus on what you do best!</p>
+    </div>
+    <div class="why-work-with-container">
+        <img src="//dy7glz37jgl0b.cloudfront.net/icons/surprise-box.png?v=966d54b722cb" aria-hidden="true">
+        <h3>Complete Package</h3>
+        <p>Forget about downloading and installing third party software. We’ll provide the tools to allow you to excel at your craft.</p>
+    </div>
+</div>
+        </div>
+    </section>
+
+        <section class="numbers body-section social_proof_counters">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
+                    <h2>The world's largest therapy service.<br/><strong>100% online.</strong></h2>
+                    <div class="col-sm-4" aria-hidden="true">
+                        <div class="counter-number" id="session_count">
+                            232208602
+                        </div>
+                        <div class="counter-label">
+                            Messages, chat, phone, video sessions
+                        </div>
+                    </div>
+                    <div class="col-sm-4" aria-hidden="true">
+                        <div class="counter-number" id="therapist_count">
+                            27512
+                        </div>
+                        <div class="counter-label">
+                            Licensed therapists
+                        </div>
+                    </div>
+                    <div class="col-sm-4" aria-hidden="true">
+                        <div class="counter-number" id="member_count">
+                            3213169
+                        </div>
+                        <div class="counter-label">
+                            People got help
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="video-testimonial">
+        <div class="container">
+            <h2>See what other therapists have to say about us</h2>
+            <div class="content-block no-margin-right">
+                <div class="toggle-controls">
+                    <i class='fa fa-play-circle fa-5x' style="display:none"></i>
+                    <video id="counselor_testimonial_video" playsInline webkit-playsinline autoPlay muted loop
+                           poster="//dy7glz37jgl0b.cloudfront.net/videos/betterhelp/counselor-collage-1.jpg?v=966d54b722cb">
+                        <source src="//dy7glz37jgl0b.cloudfront.net/videos/betterhelp/bh_counselor_testimonials-60s.mp4?v=966d54b722cb"
+                                type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-in-quotes">
+    <div class="container">
+        <div class="testimonial-container">
+
+            <div class="testimonial-highlight">
+                HappyMind provides a simple, efficient platform that empowers counselors to provide services autonomously, based on their own professional judgement. That autonomy is backed up by responsive support from HappyMind staff, and a robust community of counselors offering peer support and consultation.
+            </div>
+            <div class="testimonial-counselor">
+                <img notranslate class="user-icon" alt="Jason M. Adams" src="//dy7glz37jgl0b.cloudfront.net/funnel/counselor-avatars/jason-m-adams.jpg?v=966d54b722cb">
+                <div notranslate class="testimonial-counselor-name">
+                    Jason M. Adams
+                    <span class="credentials">(MA, LPC, NCC)</span>
+                </div>
+            </div>
+
+            <div class="testimonial-highlight">
+                My experience on the HappyMind platform over the past 4 and 1/2 years has truly been life-changing. Not only have I been able to significantly enhance my own clinical skills, but I have been able to make a profound difference in the lives of thousands of people all around the world.
+            </div>
+            <div class="testimonial-counselor">
+                <img notranslate class="user-icon" alt="Jay Swedlaw" src="//dy7glz37jgl0b.cloudfront.net/funnel/counselor-avatars/jay-swedlaw.jpg?v=966d54b722cb">
+                <div notranslate class="testimonial-counselor-name">
+                    Jay Swedlaw
+                    <span class="credentials">(MS/Ed.S. LPC, LMHC)</span>
+                </div>
+            </div>
+
+            <div class="testimonial-highlight">
+                HappyMind has provided me the opportunity to have no overhead working from home part-time while also having more time to spend with my family and children. It's also been a professional growth experience for me to offer counseling through this online format.
+            </div>
+            <div class="testimonial-counselor">
+                <img notranslate class="user-icon" alt="Rebecca Wilson" src="//dy7glz37jgl0b.cloudfront.net/funnel/counselor-avatars/rebecca-wilson.jpg?v=966d54b722cb">
+                <div notranslate class="testimonial-counselor-name">
+                    Rebecca Wilson
+                    <span class="credentials">(MSW, LCSW)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="requirements">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                            <div>
+    <h2>Requirements</h2>
+
+    <ul>
+        <li>Minimum 3 years of clinical work experience is required.</li>
+        <li>Membership and accreditation from a professional organization to provide therapy (e.g. BACP, NCS, HCPC, BPS or similar credentials).</li>
+        <li>Experience counselling adults.</li>
+        <li>A private environment for conducting sessions.</li>
+        <li>Excellent written communication.</li>
+        <li>Must have professional liability insurance.</li>
+        <li>Must pass a background check.</li>
+        <li>Reliable Internet connection.</li>
+        <li>Currently residing in the UK.</li>
+    </ul>
+    <em>Note: Therapists are not HappyMind employees, but independent providers.</em>
+</div>
+                                        <div class="center">
+                        <button class="btn btn-primary get-started-counselor-application">Start application</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hidden">
+	<p id="indeed-job-title">Therapist</p>
+	<p id="indeed-job-date">Wed, 28 Oct 2020 12:00:00 GMT</p>
+	<p id="indeed-job-ref-number">11111</p>
+	<p id="indeed-job-url">https://betterhelp.com/counselor_application/?job_id=5</p>
+	<p id="indeed-job-company">HappyMind</p>
+	<p id="indeed-job-sourcename">HappyMind</p>
+	<p id="indeed-job-city">Mountain View</p>
+	<p id="indeed-job-state">CA</p>
+	<p id="indeed-job-country">US</p>
+	<p id="indeed-job-email">therapistjobs@betterhelp.com</p>
+    <div id="indeed-job-description">
+		<p>HappyMind is looking to fill open online therapy jobs with licensed therapists. Fill out an application with the world's largest online therapy platform today.</p>
+		<div class="col-sm-6 col-xs-12">
+        <h2>Join over 27,000 therapists who are earning more with HappyMind!</h2>
+        <p id="counselor-earning-desc">Interested in joining the world’s largest mental health platform? You decide your schedule and how much you want to work, we’ll take care of the client referrals and billing details!</p>
+    <p>Find out how much you could be making by using the earnings calculator!</p>
+</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 apply-details">
+    <h2>Why work with HappyMind?</h2>
+    <div class="row">
+        <div class="col-sm-2 col-xs-3">
+            <img src="//dy7glz37jgl0b.cloudfront.net/icons/holding-coin.png?v=966d54b722cb" alt="">
+        </div>
+        <div class="col-sm-10 col-xs-9">
+            <h3>Reliable Income</h3>
+            <p>Over 10,000 people sign up on HappyMind every day looking for a therapist to help with life’s challenges. HappyMind can be your main source of income ("full time") or a supplement to your current work.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-xs-3">
+            <img src="//dy7glz37jgl0b.cloudfront.net/icons/health-benefits.png?v=966d54b722cb" alt="">
+        </div>
+        <div class="col-sm-10 col-xs-9">
+            <h3>Health Benefits</h3>
+            <p>When you take a full caseload with HappyMind, we help cover health, dental and vision benefits! <a href="javascript:void(0)" class="tooltip-question-mark health_benefit" data-text="Benefit is disbursed as a stipend and we partner with a broker to help you acquire your health plan."> <i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-xs-3">
+            <img src="//dy7glz37jgl0b.cloudfront.net/icons/video-chat-icon.png?v=966d54b722cb" alt="">
+        </div>
+        <div class="col-sm-10 col-xs-9">
+            <h3>Focus on Therapy</h3>
+            <p>No need to worry about costs from acquiring clients, billing, support, or operations. Let us handle the fees and paperwork so you can focus on what you do best!</p>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-xs-3">
+            <img src="//dy7glz37jgl0b.cloudfront.net/icons/home-2.png?v=966d54b722cb" alt="">
+        </div>
+        <div class="col-sm-10 col-xs-9">
+            <h3>Work Flexibility</h3>
+            <p>Work from the comfort of your home, on your own schedule.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-xs-3">
+            <img src="//dy7glz37jgl0b.cloudfront.net/icons/surprise-box.png?v=966d54b722cb" alt="">
+        </div>
+        <div class="col-sm-10 col-xs-9">
+            <h3>Complete Package</h3>
+            <p>Forget about downloading and installing third party software. We’ll provide the tools to allow you to excel at your craft.</p>
+        </div>
+    </div>
+</div>
+		<div>
+    <h2>Requirements</h2>
+
+    <ul>
+        <li>Licensed by a State Board to provide therapy (e.g., LCSW, LMFT, LPC, PsyD, or similar
+            credentials).<br>
+            <em>NOTE: Unfortunately, if you are an intern or require supervision to provide
+                therapy services, you cannot be a provider at HappyMind at this time. Also, we are
+                unable to accept substance abuse therapists, school therapists, registered nurses, career
+                therapists, Christian therapists and business/life coaches (unless they have an additional
+                license as a mental health therapist).</em></li>
+        <li>Experience in therapy for adults, couples, and/or teens</li>
+        <li>Excellent writing skills</li>
+        <li>Reliable Internet connection</li>
+        <li>Currently residing in the US</li>
+    </ul>
+    <em>Note: Therapists are not HappyMind employees, but independent providers.</em>
+</div>
+	</div>
+</div>
+
+    <div class="geo-partners sub-section partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="row">
+                        <img data-src="//dy7glz37jgl0b.cloudfront.net/about/mha-about-logo.png" alt="MHA Mental Health America Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/tmhi-about-logo.png" alt="Telemental Health Institute Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/amsa-bw.png" alt="AMSA American Medical Student Association Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/ismho-about-logo.jpg" alt="ISMHO International Society For Mental Health Online Logo" class="lozad img-responsive ismho-logo">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/the-mighty-logo.png" alt="The Mighty Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/therapist-aid-logo-dark.png" alt="Therapist Aid Logo" class="lozad img-responsive therapist-aid-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                </div>
+
+            
+                        <div id="modal-timeout" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <div class="h2-style">Your session is about to expire!</div>
+                                <p>You will be logged out in <span id="dialog-countdown" style="font-weight:bold"></span> seconds.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" id="modal-timeout-resume">Keep me active</button>
+                <button class="btn btn-dismiss" id="modal-timeout-logout">Log out</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="csrf_token" value="69e83dfac941d41d0071dfd6b7d2d869e71ebcb4251ff1be48c88db8ace247a6793bc1ade0c606ed52e6846613aa5709cb096a1d8bdac42854e8120fb8d6317d">
+</div>
+    
+<footer class="">
+        <div id="fraud-alert-box">
+            <div class="container">
+                <div class="box">
+                    <div class="internal">
+                        <div class="image">
+                            <img src="//assets.betterhelp.com/icons/fraud-privacy.png"/>
+                        </div>
+                        <div class="text">
+                            <h3>Fraud and Privacy Notice</h3>
+                            <p>HappyMind does not require you to install an application to your computer, nor do we support chat apps such as Wire, WhatsApp, or Signal for any legitimate use. Therapists are not required to pay fees or incur any costs to join HappyMind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="upperbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6  ">
+                                                                        If you are in a crisis or any other person may be in danger - don't use this site. <a href="/gethelpnow/">These resources</a> can provide you with immediate help.
+                                                            </div>
+                <div class="col-md-6 right">
+                                                                                                                                    <a href="https://www.mhanational.org/" target="_blank"><img class="lozad" data-src="//dy7glz37jgl0b.cloudfront.net/home/mha-badge-3.png?v=966d54b722cb" alt="MHA Mental Health America Associate Member logo" id="mha-logo"></a>
+                            <a href="https://www.ssllabs.com/ssltest/analyze.html?d=www.betterhelp.com/" target="_blank"><img class="lozad" data-src="//dy7glz37jgl0b.cloudfront.net/home/ssl-secure-bw-logo.png?v=966d54b722cb" alt="256-bit SSL Secure Logo"></a>
+                            <a href="https://www.ismho.org" target="_blank"><img class="lozad" data-src="//dy7glz37jgl0b.cloudfront.net/home/ismho.png?v=966d54b722cb" alt="ISMHO International Society for Mental Health Online Member logo"></a>
+                                                            </div>
+            </div>
+        </div>
+            </div>
+    <div id="lowerbar">
+        <div class="container" >
+                            <ul class="upper">
+                                <a href= "./about.html" id="about-nav" ><li>About</li></a>
+                                <a href="./faq.html" id="faq-nav" ><li>FAQ</li></a>
+                                <a href="./reviews.html" id="reviews-nav" ><li>Reviews</li></a>
+                                <a href="./counselorapp.html" id="counselor-nav" ><li>Therapist Jobs</li></a>
+                                <a href= "./contact.html" id="support-nav" ><li>Contact</li></a>
+                                <a href="./login.html" class="btn btn-info" id="login-nav">Login</a>
+                                <a href="./get-started.html" class="btn btn-primary" id="get-started-nav">Get Started</a>
+                                                                                <div class="social-icons right">
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Facebook"><li class="social facebook"><i class="fa fa-facebook-f" aria-hidden="true"></i></li></a>
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Linkedin"><li class="social linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Pinterest"><li class="social pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></li></a>
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Twitter"><li class="social twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
+                    </div>
+                                    </ul>
+                        <ul class="lower">
+                                                <a href="#"><li>Terms &amp; Conditions</li></a>
+                <a href="#"><li>Privacy Policy</li></a>
+                                    <a href="javascript:void(0)" onclick="Optanon.ToggleInfoDisplay();"><li>Cookie Settings</li></a>
+                                <a href="#"><li>Web Accessibility</li></a>
+                <li>&copy; 2022 HappyMind</li>
+                            </ul>
+        </div>
+    </div>
+</footer>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="display: none; enable-background:new 0 0 45 45;" xml:space="preserve">
+    <symbol id="svg-groups" viewBox="0 0 45 45">
+        <path fill="currentColor" d="M19.3,23.4l-3,5c-0.1,0.2-0.3,0.3-0.5,0.3h0h0c-0.1,0-0.2,0-0.3-0.1c-0.3-0.1-0.4-0.4-0.3-0.7l3-5
+            c0.2-0.3,0.5-0.4,0.8-0.2c0.1,0.1,0.3,0.2,0.3,0.3C19.4,23.2,19.4,23.3,19.3,23.4z M29.7,28l-3-5c-0.2-0.3-0.5-0.4-0.8-0.2
+            c-0.1,0.1-0.2,0.2-0.3,0.3c0,0.1,0,0.3,0,0.4l3,5c0.1,0.2,0.3,0.3,0.5,0.3c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0l0,0
+            C29.8,28.6,29.9,28.3,29.7,28z M27.3,33.4h-9.5c-0.3,0-0.5,0.3-0.5,0.6c0,0.3,0.2,0.5,0.5,0.6h9.5h0c0.3,0,0.5-0.3,0.5-0.6
+            C27.9,33.6,27.6,33.4,27.3,33.4z"/>
+        <path d="M22.2,6.4c1.5,0,2.7,1.2,2.7,2.7s-1.2,2.7-2.7,2.7c-1.5,0-2.7-1.2-2.7-2.7S20.7,6.4,22.2,6.4z M24.8,12
+            c1.5,2.1,2.4,4.6,2.6,7.2c0.1,0.5-0.2,1-0.7,1.1c0,0-0.1,0-0.1,0H18c-0.5,0-0.8-0.4-0.8-0.9c0,0,0-0.1,0-0.1c0.2-2.6,1-5.1,2.4-7.3
+            C19.6,12,22.3,14.6,24.8,12z M34.3,24.8c1.5,0,2.7,1.2,2.7,2.7s-1.2,2.7-2.7,2.7c-1.5,0-2.7-1.2-2.7-2.7S32.8,24.8,34.3,24.8z
+             M36.9,30.4c1.5,2.1,2.4,4.6,2.6,7.2c0.1,0.5-0.2,1-0.7,1.1c0,0-0.1,0-0.1,0h-8.7c-0.5,0-0.8-0.4-0.8-0.9c0,0,0-0.1,0-0.1
+            c0.2-2.6,1-5.1,2.4-7.3C31.7,30.4,34.4,33,36.9,30.4z M10.3,24.8c1.5,0,2.7,1.2,2.7,2.7s-1.2,2.7-2.7,2.7s-2.7-1.2-2.7-2.7
+            S8.8,24.8,10.3,24.8z M12.9,30.4c1.5,2.1,2.4,4.6,2.6,7.2c0.1,0.5-0.2,1-0.7,1.1c0,0-0.1,0-0.1,0H6.1c-0.5,0-0.8-0.4-0.8-0.9
+            c0,0,0-0.1,0-0.1c0.2-2.6,1-5.1,2.4-7.3C7.7,30.4,10.4,33,12.9,30.4z"/>
+        <path fill="currentColor" d="M34.3,30.5c-1.7,0-3-1.4-3-3s1.4-3,3-3s3,1.4,3,3S35.9,30.5,34.3,30.5z M34.3,26.1c-0.7,0-1.4,0.6-1.4,1.4
+            s0.6,1.4,1.4,1.4s1.4-0.6,1.4-1.4S35,26.1,34.3,26.1z M30.4,39.2c-0.8,0-1.5-0.7-1.5-1.5c0-0.1,0-0.2,0-0.3c0.2-2.2,1-4.4,2.3-6.2
+            c0.3-0.4,0.8-0.5,1.2-0.2c0.4,0.3,0.5,0.8,0.2,1.2c-1.1,1.6-1.8,3.5-2,5.4h7.5c0,0,0,0,0-0.1c0-1.9-0.7-3.8-1.9-5.3
+            C36,31.8,36,31.3,36.4,31c0.4-0.3,0.9-0.2,1.2,0.1c1.4,1.8,2.2,4.1,2.2,6.3c0,1-0.7,1.8-1.5,1.8L30.4,39.2
+            C30.5,39.2,30.5,39.2,30.4,39.2z M30.5,37.5C30.5,37.5,30.5,37.5,30.5,37.5L30.5,37.5C30.5,37.5,30.5,37.5,30.5,37.5z M10.3,30.4
+            c-1.7,0-3.1-1.4-3.1-3s1.4-3,3.1-3s3.1,1.4,3.1,3S12,30.4,10.3,30.4z M10.3,26C9.6,26,9,26.7,9,27.4s0.6,1.3,1.4,1.3
+            s1.4-0.6,1.4-1.3S11.1,26,10.3,26z M15.9,37.4c0-2.3-0.8-4.6-2.3-6.4c-0.3-0.4-0.8-0.4-1.2-0.1c-0.4,0.3-0.4,0.8-0.1,1.2
+            c1.2,1.5,1.9,3.4,1.9,5.3c0,0,0,0,0,0.1H6.7c0.2-1.9,0.9-3.8,2-5.4c0.3-0.4,0.2-0.9-0.2-1.2c-0.4-0.3-0.9-0.2-1.2,0.2
+            C6,32.9,5.2,35.1,5,37.3c0,0,0,0.2,0,0.2c0,0.9,0.7,1.6,1.6,1.6h7.8C15.3,39.1,15.9,38.4,15.9,37.4z M22.2,12.1
+            c-1.7,0-3.1-1.4-3.1-3.1S20.6,6,22.2,6c1.7,0,3,1.4,3,3.1S23.9,12.1,22.2,12.1z M22.2,7.7c-0.7,0-1.4,0.6-1.4,1.4s0.6,1.4,1.4,1.4
+            c0.7,0,1.4-0.6,1.4-1.4S23,7.7,22.2,7.7z M27.8,19c0-2.3-0.8-4.6-2.3-6.4c-0.3-0.4-0.8-0.4-1.2-0.1c-0.4,0.3-0.4,0.8-0.1,1.2
+            c1.2,1.5,1.9,3.4,1.9,5.3c0,0,0,0,0,0h-7.5c0.2-1.9,0.9-3.8,2-5.4c0.3-0.4,0.2-0.9-0.2-1.2c-0.4-0.3-0.9-0.2-1.2,0.2
+            c-1.3,1.9-2.1,4.1-2.3,6.3c0,0,0,0.1,0,0.2c0,0.4,0.2,0.8,0.5,1.1c0.3,0.3,0.7,0.5,1.1,0.5h7.8C27.2,20.8,27.8,20,27.8,19z"/>
+    </symbol>
+</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="groupinars-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 61 42" style="display: none; enable-background:new 0 0 45.4 45.4;" xml:space="preserve">
+    <symbol id="svg-groupinars" viewBox="0 0 61 42">
+        <path fill="currentColor" d="M30.5,2.5c4.3,0,8,3.7,8,8c0,4.4-3.6,8-8,8s-8-3.6-8-8S26.1,2.5,30.5,2.5 M51.5,8.5c1.9,0,3.5,1.6,3.5,3.5
+			c0,2-1.5,3.5-3.5,3.5c-2,0-3.5-1.5-3.5-3.5C48,10,49.5,8.5,51.5,8.5 M9.5,8.5c1.9,0,3.5,1.6,3.5,3.5c0,2-1.5,3.5-3.5,3.5
+			C7.5,15.5,6,14,6,12C6,10,7.5,8.5,9.5,8.5 M54.5,23.5c1.9,0,3.5,1.6,3.5,3.5v3c0,0.3-0.3,0.5-0.5,0.5h-4.2c-0.8-2.7-2.1-5.1-4-7
+			H54.5 M11.6,23.5c-1.9,1.9-3.3,4.3-4,7H3.5C3.2,30.5,3,30.3,3,30v-3c0-2,1.5-3.5,3.5-3.5H11.6 M37.6,26.5c4.6,0,8.4,3.8,8.4,8.4
+			v2.6c0,1.1-0.9,2-2,2H17c-1.2,0-2-0.8-2-2v-2.6c0-4.6,3.7-8.4,8.3-8.4h0.2c2.3,1,4.6,1.5,7,1.5c2.3,0,4.7-0.5,6.9-1.5H37.6
+			 M30.5,0C24.7,0,20,4.8,20,10.5C20,16.3,24.7,21,30.5,21C36.2,21,41,16.3,41,10.5C41,4.8,36.2,0,30.5,0L30.5,0z M51.5,6
+			c-3.4,0-6,2.7-6,6c0,3.4,2.6,6,6,6c3.3,0,6-2.6,6-6C57.5,8.7,54.8,6,51.5,6L51.5,6z M9.5,6c-3.4,0-6,2.7-6,6c0,3.4,2.6,6,6,6
+			c3.3,0,6-2.6,6-6C15.5,8.7,12.8,6,9.5,6L9.5,6z M54.5,21h-6c-1.7,0-3.2,0.8-4.3,1.8c3.8,2.1,6.5,5.8,7.1,10.2h6.2c1.6,0,3-1.3,3-3
+			v-3C60.5,23.7,57.8,21,54.5,21L54.5,21z M12.5,21h-6c-3.4,0-6,2.7-6,6v3c0,1.7,1.3,3,3,3h6.1c0.7-4.4,3.3-8.2,7.1-10.2
+			C15.6,21.8,14.1,21,12.5,21L12.5,21z M37.6,24h-0.8c-2,0.9-4.1,1.5-6.4,1.5c-2.3,0-4.5-0.6-6.5-1.5h-0.8c-6,0-10.8,4.9-10.8,10.9
+			v2.6c0,2.5,2,4.5,4.5,4.5h27c2.4,0,4.5-2,4.5-4.5v-2.6C48.5,28.9,43.6,24,37.6,24L37.6,24z" />
+    </symbol>
+</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="groupinars-svg-active" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 61 42" style="display: none; enable-background:new 0 0 45.4 45.4;" xml:space="preserve">
+    <symbol id="svg-groupinars-active" viewBox="0 0 61 42">
+        <path fill="currentColor" d="M9.5 18C12.7812 18 15.5 15.375 15.5 12C15.5 8.71875 12.7812 6 9.5 6C6.125 6 3.5 8.71875 3.5 12C3.5 15.375 6.125 18 9.5 18ZM51.5 18C54.7812 18 57.5 15.375 57.5 12C57.5 8.71875 54.7812 6 51.5 6C48.125 6 45.5 8.71875 45.5 12C45.5 15.375 48.125 18 51.5 18ZM54.5 21H48.5C46.8125 21 45.3125 21.75 44.1875 22.7812C48.0312 24.8438 50.6562 28.5938 51.3125 33H57.5C59.0938 33 60.5 31.6875 60.5 30V27C60.5 23.7188 57.7812 21 54.5 21ZM30.5 21C36.2188 21 41 16.3125 41 10.5C41 4.78125 36.2188 0 30.5 0C24.6875 0 20 4.78125 20 10.5C20 16.3125 24.6875 21 30.5 21ZM37.625 24H36.875C34.9062 24.9375 32.75 25.5 30.5 25.5C28.1562 25.5 26 24.9375 24.0312 24H23.2812C17.2812 24 12.5 28.875 12.5 34.875V37.5C12.5 40.0312 14.4688 42 17 42H44C46.4375 42 48.5 40.0312 48.5 37.5V34.875C48.5 28.875 43.625 24 37.625 24ZM16.7188 22.7812C15.5938 21.75 14.0938 21 12.5 21H6.5C3.125 21 0.5 23.7188 0.5 27V30C0.5 31.6875 1.8125 33 3.5 33H9.59375C10.25 28.5938 12.875 24.8438 16.7188 22.7812Z"/>
+    </symbol>
+</svg>
+            
+            
+                                        <!-- BEGIN TRACKJS -->
+<script src="//static.betterhelp.com/js/contrib/trackjs/v3/t.js?v=18" ></script>
+<script>
+    window.TrackJS && TrackJS.install({
+        token: "8e343f2dd24f4a45bf5e416e9c3b37e4",
+        userId: '',
+        console: { display: false }
+    });
+</script>
+<!-- END TRACKJS -->
+            
+            <script type="text/javascript" src="//static.betterhelp.com/js/contrib/lozad.min.js?v=18"></script>
+<script>
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+</script>
+            <script src="//static.betterhelp.com/js/contrib/jquery/2.2.2/jquery.min.js?v=18" ></script>
+
+            
+                        <script src="//static.betterhelp.com/js/contrib/bootstrap/3.3.6/js/bootstrap.min.js?v=18" ></script>
+            <script>jQuery.fn.bootstrap_tooltip = jQuery.fn.tooltip;</script> 
+            <script src="//static.betterhelp.com/js/everywhere.min.3f822e55d841.js"></script>
+            
+                        
+            
+                            <script>
+                    // Fix for android app trying to use sockets on pause/resume events without checking whether sockets are available on the given page
+                    var socket = {
+                        on: function() {
+                            return false;
+                        },
+                        disconnect: function () {
+                            return false;
+                        },
+                        emit: function () {
+                            return false;
+                        }
+                    };
+
+                    var reconnectSocket = function() {
+                        return false;
+                    }
+                </script>
+            
+                        <script src="//static.betterhelp.com/js/contrib/jstz.min.js?v=18"></script>
+            <script src="//static.betterhelp.com/js/loggedout.min.3f822e55d841.js"></script>
+
+            
+            
+            <script src="https://unpkg.com/@popperjs/core@2"></script>
+            <script src="https://unpkg.com/tippy.js@6"></script>
+
+        
+            <script src="//static.betterhelp.com/js/bhrecaptchavthree.min.3f822e55d841.js" ></script>
+        <script src="//static.betterhelp.com/js/contrib/jquery-ui-old/jquery-ui.min.js?v=18" ></script>
+    <script src="//static.betterhelp.com/js/counselor_application.min.3f822e55d841.js"></script>
+    <script src="//static.betterhelp.com/js/contrib/slider/slick_new.min.js?v=18" ></script>
+    <script src="//static.betterhelp.com/js/events.min.3f822e55d841.js"></script>
+
+            <script src="//static.betterhelp.com/js/social_proof_counter.min.3f822e55d841.js"></script>
+        <script src="//static.betterhelp.com/js/contrib/odometer.min.js?v=18"></script>
+    
+        
+            
+                        
+            
+        
+    </div>
+
+            <script>
+
+            function addFormNonces() {
+                var forms = document.querySelectorAll('form');
+                for (var i = 0; i < forms.length; i++) {
+                    addFormNonce(forms[i]);
+                }
+            }
+
+            function addFormNonce(form) {
+                // Nonce unique per user per form with random identifier
+                var nonce = page_info.user_type + ":" + page_info.user_id + ":" + form.getAttribute('id') + ":" + Date.now(),
+                    nonce_el = form.querySelector('[name=nonce]');
+
+                if (nonce_el) {
+                    nonce_el.value = nonce;
+                } else {
+                    nonce_el = document.createElement('input');
+                    nonce_el.type = 'hidden';
+                    nonce_el.name = 'nonce';
+                    nonce_el.value = nonce;
+                    form.appendChild(nonce_el);
+                }
+            }
+
+            addFormNonces();
+        </script>
+    
+            
+
+    
+    
+            </body>
+</html>
