@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+        <!-- CookiePro Cookies Consent Notice start for betterhelp.com -->
+    <!-- <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="8ff2fc2b-5cf9-4bf1-90c0-66800fed2350" ></script> -->
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+
+        const id = setInterval(function () {
+            const policy_text = document.getElementById('onetrust-policy-text');
+
+            if (policy_text) {
+                policy_text.querySelector('a').addEventListener('click', function (event) {
+                    if (event.target.textContent.toLowerCase() === 'read more') {
+                        event.preventDefault();
+                        Optanon.ToggleInfoDisplay();
+                    }
+                })
+
+                clearInterval(id)
+            }
+        }, 250);
+    </script>
+    <style>
+    #onetrust-consent-sdk {
+        font-family: 'Lato', Arial, sans-serif;
+    }
+
+    @media screen and (max-width: 550px) {
+        #onetrust-button-group {
+            display: flex !important;
+            gap: 4px;
+        }
+
+        #onetrust-button-group > button:first-of-type {
+            margin-left: auto !important;
+        }
+        
+        #onetrust-button-group > button:last-of-type {
+            margin-right: auto !important;
+        }
+    }
+    </style>
+    <!-- CookiePro Cookies Consent Notice end for betterhelp.com -->
+            <script>
+    const new_cookie_names = {
+        ms_click_tracker: 'bh_mc_id',
+    };
+
+    function get_cookie(cookie_name) {
+        let name = cookie_name + "=";
+        let cookie_array = document.cookie.split(';');
+        for (let i = 0; i < cookie_array.length; i++) {
+            let c = cookie_array[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (new_cookie_names[cookie_name] && c.indexOf(new_cookie_names[cookie_name] + '=') === 0) {
+                return c.substring(new_cookie_names[cookie_name].length + 1, c.length);
+            } else if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return null;
+    }
+
+    function set_cookie(cookie_name, cookie_value, expire_seconds, additional_param_info='') {
+        let d = new Date();
+        d.setTime(d.getTime() + (expire_seconds * 1000));
+        let expires = "";
+        if (expire_seconds != false) {
+            expires = "expires=" + d.toUTCString();
+        }
+        if (new_cookie_names[cookie_name]) {
+            cookie_name = new_cookie_names[cookie_name];
+        }
+        if (additional_param_info.length && additional_param_info.charAt(0) !== ';') {
+            additional_param_info = ';' + additional_param_info;
+        }
+        document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/" + additional_param_info;
+    }
+</script>
+        <script>
+            var page_info = {"sites_fqdn":["www.pridecounseling.com","www.faithfulcounseling.com","www.mytherapist.com","www.terappeuta.com","www.icounseling.com","www.teencounseling.com","www.betterhelp.com","www.betterhelporg.com","www.regain.us"],"redirect_sites_fqdn":["www.betterhelp.com","www.regain.us","www.faithfulcounseling.com","www.pridecounseling.com","www.teencounseling.com"],"use_cookiepro_production":true,"app_version":"3f822e55d841","user_type":"logged_out_user","user_id":"e399f37db3ab8358e71be2b0d82b7bb76d52b387f39f7cab75af5f583844457d8ddc0e3879a542b5893bb19d087ab4e252617337bdf75aba26b5b9e2049311a7","template":"about","is_mobile":false,"is_app":false,"is_ios_app":false,"is_android_app":false,"user_app_version":null,"is_local":false,"is_qa_server":false,"features":{"specify_podcast":true,"sunsetting":false,"urgent_messages":true,"couples":false,"phone_calls":true,"secret_assign_straights":true,"livechat":true,"about":true,"counselor_application":true,"counselor_application_lean":false,"worksheets":true,"smart_match_with_categories":true,"groupinars":true,"login_quotes":true,"videosessions":true,"app_supports_videosessions":true,"cloud_chat":true,"phq_followup":true,"consent_agreement":true,"gmail_quick_action":true,"scheduling":true,"support_link":true,"has_paypal_always":false,"no_trial":true,"strike_through_cake":true,"dollar_test_charge":true,"groupon":true,"mobgo":true,"mental":true,"funnel_smart_match":true,"funnel_overview":true,"offer_promo_codes":true,"email_verification_always":true,"reviews_page":true,"jobs_page":true,"security_logos_display":true,"social_links_display":true,"counselor-directory":true,"social_signup":false,"language_is_matching_hard_filter":false,"advice":true,"presskit":true,"press_page":true,"text_notifications":true,"goals":true,"goals_mobile_main_menu":false,"batch_creation":true,"ask_language":true,"parent_child_account":false,"hardcoded_testimonials":false,"friendly_funnel":true,"referral_program":true,"vouchers":true,"betterhelp_branded":true,"signup_captcha":true,"cookie_consent_required":true,"journal":true,"maintenance_plan":true,"show_business_link":true,"counselors_page":true},"date_time_formats":{"full":"F j, Y g:ia T","full_short_mo_no_tz":"M j, Y g:ia","date":"F j, Y","date_short_mo":"M j, Y","time":"g:ia","time_with_tz":"g:ia T"},"subdomain":"www","cdn_host_assets":"dy7glz37jgl0b.cloudfront.net","cdn_host":"static.betterhelp.com","assets_app_version":"?v=966d54b722cb","product_code_name":"betterhelp","product_name":"BetterHelp","unix_timestamp":1662646672,"use_trackjs":true,"trackjs_api_key":"8e343f2dd24f4a45bf5e416e9c3b37e4","trackjs_user":"","default_language_id":1,"csrf_token":"69e83dfac941d41d0071dfd6b7d2d869e71ebcb4251ff1be48c88db8ace247a6793bc1ade0c606ed52e6846613aa5709cb096a1d8bdac42854e8120fb8d6317d","presignup_experiments":{"HELP_ME_NO_POPUP":"CONTROL","CHANGE_QUIZ_HEADER":"CONTROL","BENEFIT_CODE":"TEST"},"counselor_presignup_experiments":{"THERAPIST_SOCIAL_PROOF_COUNTERS":"Test"}}
+        </script>
+                                
+    <!-- META TAGS -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>About Us - The Largest Online Therapy Provider | HappyMind</title>
+        <meta name="description" content="As the world's largest online counseling and therapist platform online, we're committed to providing discreet &amp; affordable access to professional therapy online.">
+    <meta name="keywords" content="mental health" >
+    <meta name="title" content="About Us - The Largest Online Therapy Provider | BetterHelp">
+                    <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="About Us - The Largest Online Therapy Provider | BetterHelp" />
+                    <meta property="og:url"                content="http://www.betterhelp.com" />
+            <meta property="og:description"        content="BetterHelp offers private, affordable online counseling when you need it from licensed, board-accredited therapists. Get help, you deserve to be happy!" />
+            <meta property="og:image"              content="https://dy7glz37jgl0b.cloudfront.net/brand/betterhelp/betterhelp-fb-small.jpg" />
+            <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@betterhelp">
+    <meta name="twitter:title" content="About Us - The Largest Online Therapy Provider | BetterHelp">
+                    <meta name="twitter:description" content="BetterHelp offers private, affordable online counseling when you need it from licensed, board-accredited therapists. Get help, you deserve to be happy!">
+            <meta name="twitter:image" content="https://dy7glz37jgl0b.cloudfront.net/brand/betterhelp/betterhelp-fb-small.jpg">
+                <link rel="shortcut icon" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/favicon.ico" type="image/x-icon">
+    <!-- Apple Touch Icons for mobile safari -->
+    <link rel="apple-touch-icon" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/apple-touch-icon-120x120.png">
+    <!-- End Apple Touch Icons for mobile safari -->
+
+        
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preload"
+        href="//static.betterhelp.com/css/contrib/jquerymobile/1.4.5/jquery.mobile.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    >
+            <link
+            rel="preload"
+            href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic&display=swap'
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        >
+        <link
+        rel="preload"
+        href="//static.betterhelp.com/css/contrib/font-awesome/4.7.0/css/font-awesome.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    >
+        <link rel="stylesheet" href="//static.betterhelp.com/css/contrib/font-awesome-animation/0.0.7/css/font-awesome-animation.min.css">
+                
+            
+                
+    
+    <link rel="stylesheet" href="//static.betterhelp.com/css/betterhelp/bh_style.min.3f822e55d841.css">
+
+                        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap' rel='stylesheet' type='text/css'>
+            
+    
+    <link rel="stylesheet" href="//static.betterhelp.com/css/slider/slick_new.css" >
+    <link rel="stylesheet" href="//static.betterhelp.com/css/slider/slick-theme.css" >
+
+
+                <!-- Sweeps Tracking -->
+    <script> zarazData = {"dataLayerIgnore":["gtm.dom","gtm.load","gtm.js","gtm.triggerGroup","OptanonLoaded","OneTrustLoaded"],"z_product_code_name":"betterhelp","z_loadExtraScripts":"GTM-KP7H4QL","z_cookieConsent":0} ; </script>
+    <script src="https://z.betterhelp.com/cdn-cgi/zaraz/i.js"></script>
+    <!-- End Sweeps Tracking -->
+
+<script type="text/javascript" async>
+    try {
+        ;(function (p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i);
+                p[i] = function () {
+                    (p[i].q = p[i].q || []).push(arguments)
+                };
+                p[i].q = p[i].q || [];
+                n = l.createElement(o);
+                g = l.getElementsByTagName(o)[0];
+                n.async = 1;
+                n.src = w;
+                g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "//static.betterhelp.com/js/contrib/sp/H9R1GshL.js?v=18", "snowplow"));
+
+        snowplow('newTracker', 'multisite', 'https://events.betterhelp.com', {
+            appId: '2',
+            discoverRootDomain: true,
+            cookieSameSite: 'Lax', // Recommended
+            contexts: {
+                webPage: true // default, can be omitted
+            }
+        });
+        snowplow('enableActivityTracking', {
+            minimumVisitLength: 30,
+            heartbeatDelay: 10
+        });
+        snowplow('trackPageView');
+        var snowplow_global = null;
+        snowplow(function () {
+            snowplow_global = this.multisite;
+        });
+    }
+    catch (e) {
+        console.log(e);
+    }
+</script>
+    
+        
+    
+</head>
+
+<body id="about" class="" cdn="static.betterhelp.com">
+            <script>
+            function remove_url_parameter(url, parameter) {
+                //prefer to use l.search if you have a location/link object
+                var url_parts= url.split('?');
+                if (url_parts.length>=2) {
+                    var prefix= encodeURIComponent(parameter)+'=';
+                    var pars= url_parts[1].split(/[&;]/g);
+
+                    //reverse iteration as may be destructive
+                    for (var i= pars.length; i-- > 0;) {
+                        //idiom for string.startsWith
+                        if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                            pars.splice(i, 1);
+                        }
+                    }
+
+                    url= url_parts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
+                    return url;
+                } else {
+                    return url;
+                }
+            }
+            try {
+                var clean_url = remove_url_parameter(window.location.href, 'email');
+                clean_url = remove_url_parameter(clean_url, 'e');
+                clean_url = remove_url_parameter(clean_url, 'pe');
+                clean_url = remove_url_parameter(clean_url, 'pn');
+                clean_url = remove_url_parameter(clean_url, 'organization_name');
+                window.history.replaceState('', '', clean_url);
+            }
+            catch (e) {}
+        </script>
+     <!-- end not automation and not amp -->
+            <div class="overlay-loading-layer hidden" id="loading_overlay">
+            <div class="loading-wrap">
+                <div class="loading-circle">
+                    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                </div>
+            </div>
+        </div>
+     <!-- end not amp -->
+    <div id="body-container">
+        
+            <header class="  is-logged-out">
+    
+    <!-- Branding -->
+            <a class="hidden-sm brand-logo"   href="/" >
+            <span aria-describedby="Please visit www.betterhelp.com/accessible to view the accessible version of our site."></span>
+        </a>
+                    <a class="hidden-xs  hidden-md hidden-lg brand-icon" href="/" ><div class="brand"><img src="//dy7glz37jgl0b.cloudfront.net/brand/betterhelp/icon-color-md.png?v=966d54b722cb" alt="BetterHelp home"></div></a>
+            <span aria-describedby="Please visit www.betterhelp.com/accessible to view the accessible version of our site."></span>
+                            
+        <!-- Mobile menu button -->
+                                <div class="mobilemenu-toggle"><i class="fa fa-bars"></i></div>
+                                <!-- Menu -->
+        <div class="menu " aria-label="Main Menu" role="navigation">
+
+            <!-- Left side menu - logged in users only -->
+                            <ul class="main">
+                                    </ul>
+                        <!-- Right side menu -->
+                            <ul class="right">
+                                <a href= "./index.html" id="about-nav" ><li>Home</li></a>
+
+                                                                                    <a href= "./about.html" id="about-nav" ><li>About</li></a>
+                                                                                    <a href="./faq.html" id="faq-nav" ><li>FAQ</li></a>
+                                                                                    <a href="./reviews.html" id="reviews-nav" ><li>Reviews</li></a>
+                                                                                    <a href="./counselorapp.html" id="counselor-nav" ><li>Therapist Jobs</li></a>
+                                                                                    <a href= "./contact.html" id="support-nav" ><li>Contact</li></a>
+                                                                                    <a href="./login.html" class="btn btn-info" id="login-nav">Login</a>
+                                                                                    <a href="./get-started.html" class="btn btn-primary" id="get-started-nav">Get Started</a>
+                                                                </ul>
+                    </div>
+        
+                                </header>
+<div id="notification"></div>
+
+        
+                    <div id="content-container" class="">
+                
+    <div class="banner-intro">
+        <div class="banner-intro-title">
+            <h1 class="page-title">HappyMind is the world's largest therapy platform</h1>
+        </div>
+    </div>
+    <div id="subnav">
+        <ul>
+            <li class="hidden-xs"><a href="#">About</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Therapist Directory</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Social Impact</a></li>
+        </ul>
+    </div>
+
+    <div class="container bg-gray">
+        <div class="row about-boxes">
+            <div class="col-sm-12 box">
+                <div id="our-mission">
+                    <h3>Our Mission</h3>
+                    <div class="col-sm-6 col-sm-offset-3 center">
+                        <p>Making professional therapy accessible, affordable, and convenient — so anyone who struggles with life’s challenges can get help, anytime and anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-counselors">
+                    <h3>Our Therapists</h3>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <p class="center">HappyMind offers access to licensed, trained, experienced, and accredited psychologists (PhD / PsyD), marriage and family therapists (LMFT), clinical social workers (LCSW / LMSW), and board licensed professional counselors (LPC).</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="counselor-grid" aria-hidden="true">
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/0e0ddf50996ae717b7a67eeb8f651325.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/46552fd795b247053e41a5b0138819f4.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/f9f7d2fee1b37a12ca56908e9e7f6d31.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/0925488931a87d096cad9d615e313734.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/2bbd85aee65c02d7c04651252ff0694a.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/1b016d0f45c8288124ab4398b3af3386.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/d20a14f96943cb890a776ff40f60f1b3.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/b87949556dacbe1546794c73f1a336db.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/f92cbd7a7b12a5a9ad0e7ba5008eb013.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/441eda74e746df3b50d37219891ccb4a.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/c8e626e7eab122c273bef125e745fea8.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/1504d36f7f1ccd4a2d863f7c1e24e87d.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/a0d40420c13e0a485afc860b0216a27d.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/adf0d385abfcc2057946bf63502a48c8.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/5f011a00b3efe780e78e2d82b5429ff4.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/f55111e08a4812f8d76de8256109effa.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/81cdcb9ef6682bddb05e534873c3e048.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/387859a5511b0fc685298643ee90a9a7.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/ea258f89aa8caa96685fd2e5fedc9a88.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/dc93f057280903e752c56f52d32f5514.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/bd8aa60517413f63d6fba0021b31a059.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/30243d5f186d4d3f7a595fb86f4f131b.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/a206bf0a4c3ba94c7bed0db3e3938332.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/6f0a63bbbc9d6c19a512b535c0cff36c.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/dca89d519abf9e373d93ed562a521ca4.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/f1424e37acbaac10619a7fe7c38adda5.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/b4bad3ce6ac40c8024a839b7c105de28.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/0e0ddf50996ae717b7a67eeb8f651325.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/1c641d91c16ef3f4dd479a7a8f1fbe83.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/0db4dae3eadbb824e1a72401ec594c1f.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/3f81debbb3fb9dc4a642b789af656133.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/8c6830bb46988faf7ffe0d8facea38e4.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/5b460df29a91d28fe857d40d80cecf51.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/46c9783627018b958a1957083b46ce5c.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/df3d39b9e9ebd303bb6e5dbd0901f6ad.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/cfcc4a387b2f8e1719a1d912f327a1ed.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                                <div><img src="//dy7glz37jgl0b.cloudfront.net/about/counselors/e6ae059352f9e6d36e46af66ab0ae6b4.jpg?v=966d54b722cb" alt="Therapist Photo" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="#" class="second-cta">Meet our therapists</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-success-stories">
+                    <h3>Our Success Stories</h3>
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 center mtop20">
+                            <div class="col-sm-4">
+                                <div class="success-story">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/ghita-success.jpg"/>
+                                    "The biggest achievement I've made is, truly, fighting for myself. Through working with Aiko and taking the time to discuss various issues with her, I've become a bigger advocate for myself, and I'm so proud of that."
+                                    <div><a href="https://www.betterhelp.com/advice/success-stories/how-ive-learned-to-use-mindfulness-to-get-through-a-breakup-and-be-a-better-person-ghita/">Read more</a></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="success-story">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/ryan-success.jpg"/>
+                                    "I have now been working with Sheilah on HappyMind for about 4 weeks, and can confidently say that I am a lot less anxious about my career path now than when I first signed up...I am so much better off now than I was before."
+                                    <div><a href="https://www.betterhelp.com/advice/success-stories/the-help-i-needed-with-a-big-life-decision-ryan/">Read more</a></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="success-story">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/laura-success.jpg"/>
+                                    "I am a totally different person now than when I signed up 19 months ago. I have found my voice and can speak up for myself now....My confidence level is also better than it ever has been."
+                                    <div><a href="https://www.betterhelp.com/advice/success-stories/overcoming-my-anxiety-and-recovering-from-a-secret-kept-over-45-years-laurie/">Read more</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button mtop20">
+                            <a href="#" class="second-cta">See more stories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-press">
+                    <h3>Our Media Coverage</h3>
+                    <div class="row mbot20">
+                        <div class="testimonials col-sm-8 col-sm-offset-2">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="testimonial-slider" role="region" aria-label="Media coverage carousel" aria-hidden="true">
+                                        <div class="slide center" role="group" aria-label="slide 1 of 6">
+                                            <p>"My HappyMind therapist asked the same kinds of thought-provoking questions as the traditional therapists I worked with in the past...she helped me identify anxiety triggers and coping mechanisms much faster than it would have taken had we met only once a week. "</p>
+                                            <img src="//dy7glz37jgl0b.cloudfront.net/press/wsj.png" class="img-responsive" alt="The Wall Street Journal logo">
+                                        </div>
+                                        <div class="slide center" role="group" aria-label="slide 2 of 6">
+                                            <p>"In the field of psychology, this has been a game changer both for the treatment of patients and for the wellbeing of both patient and mental health providers. Patients have more flexibility, because location and schedule are no longer a barrier, and they have more choice of providers."</p>
+                                            <img src="//dy7glz37jgl0b.cloudfront.net/press/chicagotribune.png" class="img-responsive" alt="Chicago Tribune logo">
+                                        </div>
+                                        <div class="slide center" role="group" aria-label="slide 3 of 6">
+                                            <p>"David Kaplan, chief professional officer of the American Counseling Association, believes that technology plays an important and necessary role in the counseling profession...And for clients with conditions like agoraphobia or severe anxiety, online sessions may be the only choice."</p>
+                                            <img src="//dy7glz37jgl0b.cloudfront.net/press/atlantic.png" class="img-responsive" alt="The Atalantic logo">
+                                        </div>
+                                        <div class="slide center" role="group" aria-label="slide 4 of 6">
+                                            <p>"Online or virtual therapy is helpful for people who live in remote areas where there aren't a ton of options for seeing a therapist in person. HappyMind provides resources for therapists who are all over the country. Also, it's important to see what kind of therapy works best for you."</p>
+                                            <img src="//dy7glz37jgl0b.cloudfront.net/press/huffpost-logo.jpg" class="img-responsive" alt="Huffpost logo">
+                                            <br />
+                                        </div>
+                                        <div class="slide center" role="group" aria-label="slide 5 of 6">
+                                            <p>"HappyMind is an online counseling website with nearly two million clients."</p>
+                                            <img src="//dy7glz37jgl0b.cloudfront.net/press/abc-logo.jpg" class="img-responsive" style="max-height:50px" alt="American Broadcasting Company logo">
+                                            <br />
+                                        </div>
+                                        <div class="slide center" role="group" aria-label="slide 6 of 6">
+                                            <p>"One solid option is online counseling. Your friend can find this on HappyMind. Online therapy can be a wonderful tool for your depressed friend, especially if they are having trouble leaving the house. They will also have greater access to professionals who are competent if they happen to live in a remote area."</p>
+                                            <img src="//dy7glz37jgl0b.cloudfront.net/press/psychology-today-logo.png" class="img-responsive" alt="Psychology Today logo">
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="#" class="second-cta">See more press</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-partners" class="center partners">
+                    <h3 class="mbot20">Our Partners</h3>
+                    <div class="row">
+                        <img data-src="//dy7glz37jgl0b.cloudfront.net/about/mha-about-logo.png" alt="MHA Mental Health America Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/tmhi-about-logo.png" alt="Telemental Health Institute Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/amsa-bw.png" alt="AMSA American Medical Student Association Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/ismho-about-logo.jpg" alt="ISMHO International Society For Mental Health Online Logo" class="lozad img-responsive ismho-logo">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/the-mighty-logo.png" alt="The Mighty Logo" class="lozad img-responsive">
+<img data-src="//dy7glz37jgl0b.cloudfront.net/about/therapist-aid-logo-dark.png" alt="Therapist Aid Logo" class="lozad img-responsive therapist-aid-logo">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="./contact.html" class="second-cta">Partner with us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-team" class="left-col">
+                    <h3>Our Team</h3>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <p class="center">We are passionate and compassionate professionals, driven by the mission of helping more people live a better and happier life every day. We are growing fast and always looking for new talent. If you love people and like challenges - come and join us!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="image-carousel">
+                                <div class="images">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-john-aaron.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-dave-2.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-julie-laura-3.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-nick.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-omer-danny.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-victoria-aaron.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-alon-dave.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/team-julie-nick-omer.jpg?v=966d54b722cb">
+                                </div>
+                                <a href="#" class="carousel-control-prev">&lsaquo;</a>
+                                <a href="#" class="carousel-control-next">&rsaquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="#" class="second-cta">Join our team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-products" class="center">
+                    <h3 class="mbot20">Our Products</h3>
+                    <img src="//dy7glz37jgl0b.cloudfront.net/brand/tmp/betterhelp/icon-color.png?v=966d54b722cb" class="img-responsive bh-logo-sm">
+                    <img src="//dy7glz37jgl0b.cloudfront.net/about/regain-dark-logo.png" class="img-responsive">
+                    <img src="//dy7glz37jgl0b.cloudfront.net/brand/tmp/terappeuta/icon-color.png?v=966d54b722cb" class="img-responsive">
+                    <img src="//dy7glz37jgl0b.cloudfront.net/about/tc-logo-on-white.png" class="img-responsive" style="height:23px;">
+                    <img src="//dy7glz37jgl0b.cloudfront.net/about/icounseling-dark-logo.png" class="img-responsive">
+                </div>
+            </div>
+        </div>-->
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-success">
+                    <h3>Our Latest Reviews</h3>
+                    <div class="testimonials col-sm-8 col-sm-offset-2">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="testimonial-slider" role="region" aria-label="Reviews carousel" aria-hidden="true">
+                                                                            <div class="slide center" role="group" aria-label="slide 1 of 8">
+                                            <p class="text">"I love talking to Mary Jo Ayllon! She makes me feel seen and comfortable. She listens so well and gives me valuable feedback and insight. I really enjoy my sessions! "</p>
+                                            <span class="author"> - Written                                                                                                     1 day
+                                                 ago by <var client>M.O.</var> for <var counselor>Mary Jo Ayllon (MA,LPC)</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 2 of 8">
+                                            <p class="text">"I highly recommend Dr. Scharf- she is friendly, helpful, and insightful!"</p>
+                                            <span class="author"> - Written                                                                                                     1 day
+                                                 ago by <var client>B.E.</var> for <var counselor>Dr. Alice-Diane Scharf</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 3 of 8">
+                                            <p class="text">"An amazing person with an abundance of knowledge and support, and an amazing reader who provides guidance and support through different methodologies that suits the person."</p>
+                                            <span class="author"> - Written                                                                                                     1 day
+                                                 ago by <var client>D.I.</var> for <var counselor>Dr. Phyllis  Mogielski-Watson (MS,PsyD,LCPC)</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 4 of 8">
+                                            <p class="text">"Aimee has been wonderful so far in supporting my journey. It’s easy to tell she has a passion for counseling and her advice is extremely helpful. I would highly recommend working with her to anyone seeking a knowledgeable therapist. "</p>
+                                            <span class="author"> - Written                                                                                                     1 day
+                                                 ago by <var client>A.M.</var> for <var counselor>Aimee Herzog (M.S.,LPC)</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 5 of 8">
+                                            <p class="text">"I tell everyone about HappyMind. Jennifer has helped me so much. I feel I am a stronger person because of her help. "</p>
+                                            <span class="author"> - Written                                                                                                     1 day
+                                                 ago by <var client>K.I.</var> for <var counselor>Jennifer  Myers (M.A.,LMFT)</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 6 of 8">
+                                            <p class="text">"Adrian is very understanding and patient. He offers kind and soft advice to help guild me to a beneficial solution. "</p>
+                                            <span class="author"> - Written                                                                                                     1 day
+                                                 ago by <var client>J.U.</var> for <var counselor>Adrian Rives</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 7 of 8">
+                                            <p class="text">"David is an amazing listener and asks the hard questions that I need to answer for myself. I strongly recommend him as a therapist because I see the progress in my own life and I feel like I could not have done this without David."</p>
+                                            <span class="author"> - Written                                                                                                     <var days_count>2</var> days
+                                                 ago by <var client>M.A.</var> for <var counselor>David Albert (LCSW-C)</var>
+                    </span>
+                                        </div>
+                                                                            <div class="slide center" role="group" aria-label="slide 8 of 8">
+                                            <p class="text">"Celena is so good at helping me find solutions when I feel overwhelmed. I always finish my sessions full of energy. It does me really good to have someone I feel I can trust."</p>
+                                            <span class="author"> - Written                                                                                                     <var days_count>2</var> days
+                                                 ago by <var client>H.O.</var> for <var counselor>Celena Benjamin (LMHC, BCBA, NCC)</var>
+                    </span>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="./reviews.html" class="second-cta">See more reviews</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-support">
+                    <h3>Our Support</h3>
+                    <div class="col-sm-8 col-sm-offset-2 center">
+                        <p>Our support team is always here to answer any question and resolve any problem. Just contact us!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="image-carousel">
+                                <div class="images">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/support-bonnie-sonya.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/support-allison.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/support-aaron.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/support-laura-2.jpg?v=966d54b722cb">
+                                </div>
+                                <a href="#" class="carousel-control-prev">&lsaquo;</a>
+                                <a href="#" class="carousel-control-next">&rsaquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="./contact.html" class="second-cta">Contact Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes">
+            <div class="col-sm-12">
+                <div id="our-office">
+                    <h3>Our Office</h3>
+                    <div class="col-sm-8 col-sm-offset-2 center">
+                        <p>Our office is located in the heart of Silicon Valley, where world-changing technologies are being created. We are proud neighbours of iconic companies like Google, Apple, and Facebook.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="image-carousel">
+                                <div class="images">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/office-1.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/office-2.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/office-3.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/office-4.jpg?v=966d54b722cb">
+                                    <img src="//dy7glz37jgl0b.cloudfront.net/about/office-5.jpg?v=966d54b722cb">
+                                </div>
+                                <a href="#" class="carousel-control-prev">&lsaquo;</a>
+                                <a href="#" class="carousel-control-next">&rsaquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-button">
+                            <a href="https://goo.gl/maps/4beDqxrMw782" rel="nofollow" class="second-cta">Visit Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+
+            
+                        <div id="modal-timeout" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <div class="h2-style">Your session is about to expire!</div>
+                                <p>You will be logged out in <span id="dialog-countdown" style="font-weight:bold"></span> seconds.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" id="modal-timeout-resume">Keep me active</button>
+                <button class="btn btn-dismiss" id="modal-timeout-logout">Log out</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="csrf_token" value="69e83dfac941d41d0071dfd6b7d2d869e71ebcb4251ff1be48c88db8ace247a6793bc1ade0c606ed52e6846613aa5709cb096a1d8bdac42854e8120fb8d6317d">
+</div>
+    
+<footer class="">
+    <div id="upperbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6  ">
+                                                                        If you are in a crisis or any other person may be in danger - don't use this site. <a href="/gethelpnow/">These resources</a> can provide you with immediate help.
+                                                            </div>
+                <div class="col-md-6 right">
+                                                                                                                                    <a href="https://www.mhanational.org/" target="_blank"><img class="lozad" data-src="//dy7glz37jgl0b.cloudfront.net/home/mha-badge-3.png?v=966d54b722cb" alt="MHA Mental Health America Associate Member logo" id="mha-logo"></a>
+                            <a href="https://www.ssllabs.com/ssltest/analyze.html?d=www.betterhelp.com/" target="_blank"><img class="lozad" data-src="//dy7glz37jgl0b.cloudfront.net/home/ssl-secure-bw-logo.png?v=966d54b722cb" alt="256-bit SSL Secure Logo"></a>
+                            <a href="https://www.ismho.org" target="_blank"><img class="lozad" data-src="//dy7glz37jgl0b.cloudfront.net/home/ismho.png?v=966d54b722cb" alt="ISMHO International Society for Mental Health Online Member logo"></a>
+                                                            </div>
+            </div>
+        </div>
+            </div>
+    <div id="lowerbar">
+        <div class="container" >
+                            <ul class="upper">
+                                        <a href="./index.html" id="footer-home"><li>Home</li></a>
+                                                            <a href="./about.html"><li>About</li></a>
+                                                            <a href="./faq.html"><li>FAQ</li></a>
+                                                            <a href="./reviews.html" id="footer-reviews"><li>Reviews</li></a>
+                                                            <a href="#" id="footer-jobs"><li>Career</li></a>
+                                                                <a href="./counselorapp.html"><li>Find a Therapist</li></a>
+                                                            <a href="#"><li>Online Therapy</li></a>
+                                        <a href="./contact.html"><li>Contact</li></a>
+                                                                <a href="./counselorapp.html"><li>For Therapists</li></a>
+                                                                                <div class="social-icons right">
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Facebook"><li class="social facebook"><i class="fa fa-facebook-f" aria-hidden="true"></i></li></a>
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Linkedin"><li class="social linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Pinterest"><li class="social pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></li></a>
+                        <a class="social-icons" href="#" target="_blank" aria-label="Betterhelp page on Twitter"><li class="social twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
+                    </div>
+                                    </ul>
+                        <ul class="lower">
+                                                <a href="/terms/"><li>Terms &amp; Conditions</li></a>
+                <a href="#"><li>Privacy Policy</li></a>
+                                    <a href="javascript:void(0)" onclick="Optanon.ToggleInfoDisplay();"><li>Cookie Settings</li></a>
+                                <a href="#"><li>Web Accessibility</li></a>
+                <li>&copy; 2022 HappyMind</li>
+                            </ul>
+        </div>
+    </div>
+</footer>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="display: none; enable-background:new 0 0 45 45;" xml:space="preserve">
+    <symbol id="svg-groups" viewBox="0 0 45 45">
+        <path fill="currentColor" d="M19.3,23.4l-3,5c-0.1,0.2-0.3,0.3-0.5,0.3h0h0c-0.1,0-0.2,0-0.3-0.1c-0.3-0.1-0.4-0.4-0.3-0.7l3-5
+            c0.2-0.3,0.5-0.4,0.8-0.2c0.1,0.1,0.3,0.2,0.3,0.3C19.4,23.2,19.4,23.3,19.3,23.4z M29.7,28l-3-5c-0.2-0.3-0.5-0.4-0.8-0.2
+            c-0.1,0.1-0.2,0.2-0.3,0.3c0,0.1,0,0.3,0,0.4l3,5c0.1,0.2,0.3,0.3,0.5,0.3c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0l0,0
+            C29.8,28.6,29.9,28.3,29.7,28z M27.3,33.4h-9.5c-0.3,0-0.5,0.3-0.5,0.6c0,0.3,0.2,0.5,0.5,0.6h9.5h0c0.3,0,0.5-0.3,0.5-0.6
+            C27.9,33.6,27.6,33.4,27.3,33.4z"/>
+        <path d="M22.2,6.4c1.5,0,2.7,1.2,2.7,2.7s-1.2,2.7-2.7,2.7c-1.5,0-2.7-1.2-2.7-2.7S20.7,6.4,22.2,6.4z M24.8,12
+            c1.5,2.1,2.4,4.6,2.6,7.2c0.1,0.5-0.2,1-0.7,1.1c0,0-0.1,0-0.1,0H18c-0.5,0-0.8-0.4-0.8-0.9c0,0,0-0.1,0-0.1c0.2-2.6,1-5.1,2.4-7.3
+            C19.6,12,22.3,14.6,24.8,12z M34.3,24.8c1.5,0,2.7,1.2,2.7,2.7s-1.2,2.7-2.7,2.7c-1.5,0-2.7-1.2-2.7-2.7S32.8,24.8,34.3,24.8z
+             M36.9,30.4c1.5,2.1,2.4,4.6,2.6,7.2c0.1,0.5-0.2,1-0.7,1.1c0,0-0.1,0-0.1,0h-8.7c-0.5,0-0.8-0.4-0.8-0.9c0,0,0-0.1,0-0.1
+            c0.2-2.6,1-5.1,2.4-7.3C31.7,30.4,34.4,33,36.9,30.4z M10.3,24.8c1.5,0,2.7,1.2,2.7,2.7s-1.2,2.7-2.7,2.7s-2.7-1.2-2.7-2.7
+            S8.8,24.8,10.3,24.8z M12.9,30.4c1.5,2.1,2.4,4.6,2.6,7.2c0.1,0.5-0.2,1-0.7,1.1c0,0-0.1,0-0.1,0H6.1c-0.5,0-0.8-0.4-0.8-0.9
+            c0,0,0-0.1,0-0.1c0.2-2.6,1-5.1,2.4-7.3C7.7,30.4,10.4,33,12.9,30.4z"/>
+        <path fill="currentColor" d="M34.3,30.5c-1.7,0-3-1.4-3-3s1.4-3,3-3s3,1.4,3,3S35.9,30.5,34.3,30.5z M34.3,26.1c-0.7,0-1.4,0.6-1.4,1.4
+            s0.6,1.4,1.4,1.4s1.4-0.6,1.4-1.4S35,26.1,34.3,26.1z M30.4,39.2c-0.8,0-1.5-0.7-1.5-1.5c0-0.1,0-0.2,0-0.3c0.2-2.2,1-4.4,2.3-6.2
+            c0.3-0.4,0.8-0.5,1.2-0.2c0.4,0.3,0.5,0.8,0.2,1.2c-1.1,1.6-1.8,3.5-2,5.4h7.5c0,0,0,0,0-0.1c0-1.9-0.7-3.8-1.9-5.3
+            C36,31.8,36,31.3,36.4,31c0.4-0.3,0.9-0.2,1.2,0.1c1.4,1.8,2.2,4.1,2.2,6.3c0,1-0.7,1.8-1.5,1.8L30.4,39.2
+            C30.5,39.2,30.5,39.2,30.4,39.2z M30.5,37.5C30.5,37.5,30.5,37.5,30.5,37.5L30.5,37.5C30.5,37.5,30.5,37.5,30.5,37.5z M10.3,30.4
+            c-1.7,0-3.1-1.4-3.1-3s1.4-3,3.1-3s3.1,1.4,3.1,3S12,30.4,10.3,30.4z M10.3,26C9.6,26,9,26.7,9,27.4s0.6,1.3,1.4,1.3
+            s1.4-0.6,1.4-1.3S11.1,26,10.3,26z M15.9,37.4c0-2.3-0.8-4.6-2.3-6.4c-0.3-0.4-0.8-0.4-1.2-0.1c-0.4,0.3-0.4,0.8-0.1,1.2
+            c1.2,1.5,1.9,3.4,1.9,5.3c0,0,0,0,0,0.1H6.7c0.2-1.9,0.9-3.8,2-5.4c0.3-0.4,0.2-0.9-0.2-1.2c-0.4-0.3-0.9-0.2-1.2,0.2
+            C6,32.9,5.2,35.1,5,37.3c0,0,0,0.2,0,0.2c0,0.9,0.7,1.6,1.6,1.6h7.8C15.3,39.1,15.9,38.4,15.9,37.4z M22.2,12.1
+            c-1.7,0-3.1-1.4-3.1-3.1S20.6,6,22.2,6c1.7,0,3,1.4,3,3.1S23.9,12.1,22.2,12.1z M22.2,7.7c-0.7,0-1.4,0.6-1.4,1.4s0.6,1.4,1.4,1.4
+            c0.7,0,1.4-0.6,1.4-1.4S23,7.7,22.2,7.7z M27.8,19c0-2.3-0.8-4.6-2.3-6.4c-0.3-0.4-0.8-0.4-1.2-0.1c-0.4,0.3-0.4,0.8-0.1,1.2
+            c1.2,1.5,1.9,3.4,1.9,5.3c0,0,0,0,0,0h-7.5c0.2-1.9,0.9-3.8,2-5.4c0.3-0.4,0.2-0.9-0.2-1.2c-0.4-0.3-0.9-0.2-1.2,0.2
+            c-1.3,1.9-2.1,4.1-2.3,6.3c0,0,0,0.1,0,0.2c0,0.4,0.2,0.8,0.5,1.1c0.3,0.3,0.7,0.5,1.1,0.5h7.8C27.2,20.8,27.8,20,27.8,19z"/>
+    </symbol>
+</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="groupinars-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 61 42" style="display: none; enable-background:new 0 0 45.4 45.4;" xml:space="preserve">
+    <symbol id="svg-groupinars" viewBox="0 0 61 42">
+        <path fill="currentColor" d="M30.5,2.5c4.3,0,8,3.7,8,8c0,4.4-3.6,8-8,8s-8-3.6-8-8S26.1,2.5,30.5,2.5 M51.5,8.5c1.9,0,3.5,1.6,3.5,3.5
+			c0,2-1.5,3.5-3.5,3.5c-2,0-3.5-1.5-3.5-3.5C48,10,49.5,8.5,51.5,8.5 M9.5,8.5c1.9,0,3.5,1.6,3.5,3.5c0,2-1.5,3.5-3.5,3.5
+			C7.5,15.5,6,14,6,12C6,10,7.5,8.5,9.5,8.5 M54.5,23.5c1.9,0,3.5,1.6,3.5,3.5v3c0,0.3-0.3,0.5-0.5,0.5h-4.2c-0.8-2.7-2.1-5.1-4-7
+			H54.5 M11.6,23.5c-1.9,1.9-3.3,4.3-4,7H3.5C3.2,30.5,3,30.3,3,30v-3c0-2,1.5-3.5,3.5-3.5H11.6 M37.6,26.5c4.6,0,8.4,3.8,8.4,8.4
+			v2.6c0,1.1-0.9,2-2,2H17c-1.2,0-2-0.8-2-2v-2.6c0-4.6,3.7-8.4,8.3-8.4h0.2c2.3,1,4.6,1.5,7,1.5c2.3,0,4.7-0.5,6.9-1.5H37.6
+			 M30.5,0C24.7,0,20,4.8,20,10.5C20,16.3,24.7,21,30.5,21C36.2,21,41,16.3,41,10.5C41,4.8,36.2,0,30.5,0L30.5,0z M51.5,6
+			c-3.4,0-6,2.7-6,6c0,3.4,2.6,6,6,6c3.3,0,6-2.6,6-6C57.5,8.7,54.8,6,51.5,6L51.5,6z M9.5,6c-3.4,0-6,2.7-6,6c0,3.4,2.6,6,6,6
+			c3.3,0,6-2.6,6-6C15.5,8.7,12.8,6,9.5,6L9.5,6z M54.5,21h-6c-1.7,0-3.2,0.8-4.3,1.8c3.8,2.1,6.5,5.8,7.1,10.2h6.2c1.6,0,3-1.3,3-3
+			v-3C60.5,23.7,57.8,21,54.5,21L54.5,21z M12.5,21h-6c-3.4,0-6,2.7-6,6v3c0,1.7,1.3,3,3,3h6.1c0.7-4.4,3.3-8.2,7.1-10.2
+			C15.6,21.8,14.1,21,12.5,21L12.5,21z M37.6,24h-0.8c-2,0.9-4.1,1.5-6.4,1.5c-2.3,0-4.5-0.6-6.5-1.5h-0.8c-6,0-10.8,4.9-10.8,10.9
+			v2.6c0,2.5,2,4.5,4.5,4.5h27c2.4,0,4.5-2,4.5-4.5v-2.6C48.5,28.9,43.6,24,37.6,24L37.6,24z" />
+    </symbol>
+</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="groupinars-svg-active" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 61 42" style="display: none; enable-background:new 0 0 45.4 45.4;" xml:space="preserve">
+    <symbol id="svg-groupinars-active" viewBox="0 0 61 42">
+        <path fill="currentColor" d="M9.5 18C12.7812 18 15.5 15.375 15.5 12C15.5 8.71875 12.7812 6 9.5 6C6.125 6 3.5 8.71875 3.5 12C3.5 15.375 6.125 18 9.5 18ZM51.5 18C54.7812 18 57.5 15.375 57.5 12C57.5 8.71875 54.7812 6 51.5 6C48.125 6 45.5 8.71875 45.5 12C45.5 15.375 48.125 18 51.5 18ZM54.5 21H48.5C46.8125 21 45.3125 21.75 44.1875 22.7812C48.0312 24.8438 50.6562 28.5938 51.3125 33H57.5C59.0938 33 60.5 31.6875 60.5 30V27C60.5 23.7188 57.7812 21 54.5 21ZM30.5 21C36.2188 21 41 16.3125 41 10.5C41 4.78125 36.2188 0 30.5 0C24.6875 0 20 4.78125 20 10.5C20 16.3125 24.6875 21 30.5 21ZM37.625 24H36.875C34.9062 24.9375 32.75 25.5 30.5 25.5C28.1562 25.5 26 24.9375 24.0312 24H23.2812C17.2812 24 12.5 28.875 12.5 34.875V37.5C12.5 40.0312 14.4688 42 17 42H44C46.4375 42 48.5 40.0312 48.5 37.5V34.875C48.5 28.875 43.625 24 37.625 24ZM16.7188 22.7812C15.5938 21.75 14.0938 21 12.5 21H6.5C3.125 21 0.5 23.7188 0.5 27V30C0.5 31.6875 1.8125 33 3.5 33H9.59375C10.25 28.5938 12.875 24.8438 16.7188 22.7812Z"/>
+    </symbol>
+</svg>
+            
+            
+        
+                                <!-- BEGIN TRACKJS -->
+<script src="//static.betterhelp.com/js/contrib/trackjs/v3/t.js?v=18" ></script>
+<script>
+    window.TrackJS && TrackJS.install({
+        token: "8e343f2dd24f4a45bf5e416e9c3b37e4",
+        userId: '',
+        console: { display: false }
+    });
+</script>
+<!-- END TRACKJS -->
+            
+            <script type="text/javascript" src="//static.betterhelp.com/js/contrib/lozad.min.js?v=18"></script>
+<script>
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+</script>
+            <script src="//static.betterhelp.com/js/contrib/jquery/2.2.2/jquery.min.js?v=18" ></script>
+
+            
+                        <script src="//static.betterhelp.com/js/contrib/bootstrap/3.3.6/js/bootstrap.min.js?v=18" ></script>
+            <script>jQuery.fn.bootstrap_tooltip = jQuery.fn.tooltip;</script> 
+            <script src="//static.betterhelp.com/js/everywhere.min.3f822e55d841.js"></script>
+            
+                        
+            
+                            <script>
+                    // Fix for android app trying to use sockets on pause/resume events without checking whether sockets are available on the given page
+                    var socket = {
+                        on: function() {
+                            return false;
+                        },
+                        disconnect: function () {
+                            return false;
+                        },
+                        emit: function () {
+                            return false;
+                        }
+                    };
+
+                    var reconnectSocket = function() {
+                        return false;
+                    }
+                </script>
+            
+                        <script src="//static.betterhelp.com/js/contrib/jstz.min.js?v=18"></script>
+            <script src="//static.betterhelp.com/js/loggedout.min.3f822e55d841.js"></script>
+
+            
+            
+            <script src="https://unpkg.com/@popperjs/core@2"></script>
+            <script src="https://unpkg.com/tippy.js@6"></script>
+
+        
+    <script src="//static.betterhelp.com/js/contrib/jquery-ui-old/jquery-ui.min.js?v=18"></script>
+    <script src="//static.betterhelp.com/js/contrib/slider/slick_new.min.js?v=18" ></script>
+    <script src="//static.betterhelp.com/js/betterhelp/about.min.3f822e55d841.js"></script>
+
+        
+            
+                        
+            
+        
+    </div>
+
+            <script>
+
+            function addFormNonces() {
+                var forms = document.querySelectorAll('form');
+                for (var i = 0; i < forms.length; i++) {
+                    addFormNonce(forms[i]);
+                }
+            }
+
+            function addFormNonce(form) {
+                // Nonce unique per user per form with random identifier
+                var nonce = page_info.user_type + ":" + page_info.user_id + ":" + form.getAttribute('id') + ":" + Date.now(),
+                    nonce_el = form.querySelector('[name=nonce]');
+
+                if (nonce_el) {
+                    nonce_el.value = nonce;
+                } else {
+                    nonce_el = document.createElement('input');
+                    nonce_el.type = 'hidden';
+                    nonce_el.name = 'nonce';
+                    nonce_el.value = nonce;
+                    form.appendChild(nonce_el);
+                }
+            }
+
+            addFormNonces();
+        </script>
+    
+            
+
+    
+    
+            </body>
+</html>
